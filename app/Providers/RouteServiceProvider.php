@@ -16,8 +16,9 @@ class RouteServiceProvider extends ServiceProvider
      * Typically, users are redirected here after authentication.
      *
      * @var string
+     * 
      */
-    public const HOME = '/home';
+    public const HOME = '/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -33,6 +34,14 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            Route::middleware(['web', 'auth', 'admin'])
+                ->prefix('admin')
+                ->group(function () {
+                    Route::get('/dashboard', function () {
+                        return view('admin.dashboard');
+                    })->name('admin.dashboard');
+                });
         });
     }
 

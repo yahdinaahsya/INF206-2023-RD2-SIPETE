@@ -36,6 +36,11 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+<<<<<<< HEAD
+=======
+            \App\Http\Middleware\HandleInertiaRequests::class,
+            \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
+>>>>>>> 2108107010011
         ],
 
         'api' => [
@@ -43,6 +48,17 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+<<<<<<< HEAD
+=======
+
+        'admin' => [
+            
+            \App\Http\Middleware\AdminMiddleware::class,
+            \App\Http\Middleware\RedirectIfNotAdmin::class,
+        ],
+        'auth' =>[ \App\Http\Middleware\Authenticate::class,
+        ]
+>>>>>>> 2108107010011
     ];
 
     /**
@@ -64,4 +80,14 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
+<<<<<<< HEAD
+=======
+
+    // protected $routeMiddleware = [
+    //     // ...
+    //     'admin' => \App\Http\Middleware\RedirectIfNotAdmin::class,
+    // ];
+    
+    
+>>>>>>> 2108107010011
 }

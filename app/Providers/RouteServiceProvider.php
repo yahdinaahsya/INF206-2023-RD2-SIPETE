@@ -16,6 +16,10 @@ class RouteServiceProvider extends ServiceProvider
      * Typically, users are redirected here after authentication.
      *
      * @var string
+<<<<<<< HEAD
+=======
+     * 
+>>>>>>> 2108107010011
      */
     public const HOME = '/dashboard';
 
@@ -33,6 +37,17 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+<<<<<<< HEAD
+=======
+
+            Route::middleware(['web', 'auth', 'admin'])
+                ->prefix('admin')
+                ->group(function () {
+                    Route::get('/dashboard', function () {
+                        return view('admin.dashboard');
+                    })->name('admin.dashboard');
+                });
+>>>>>>> 2108107010011
         });
     }
 

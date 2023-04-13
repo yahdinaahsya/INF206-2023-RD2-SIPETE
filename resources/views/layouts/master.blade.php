@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+<<<<<<< HEAD
+=======
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css">
+>>>>>>> 2108107010011
 
 </head>
 
@@ -61,6 +66,17 @@
                         <span class="title">Kelola Donasi</span>
                     </a>
                 </li>
+<<<<<<< HEAD
+=======
+                <li>
+                    <a href="{{ route('kelola-koin') }}">
+                        <span class="icon">
+                            <ion-icon name="gift-outline"></ion-icon>
+                        </span>
+                        <span class="title">Kelola Koin</span>
+                    </a>
+                </li>
+>>>>>>> 2108107010011
                 {{-- <li>
                     <a href="#">
                         <span class="icon">

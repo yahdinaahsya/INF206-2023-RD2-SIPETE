@@ -8,6 +8,10 @@ use App\Http\Controllers\ManageTextileController;
 use App\Models\TableUserModel;
 use App\Models\TableTextilModel;
 use App\Http\Controllers\KelolaDonasiController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\KelolaKoinController;
+>>>>>>> 2108107010011
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +24,7 @@ use App\Http\Controllers\KelolaDonasiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingpage');
 });
 
 Route::get('/dashboard', function () {
@@ -39,6 +43,10 @@ Route::get('/admin',[AdminController::class, 'index'])->name('admin');
 Route::get('/manage-user',[ManageUserController::class, 'index'])->name('manage-user');
 Route::get('/kelola-donasi',[KelolaDonasiController::class,'index'])->name('kelola-donasi');
 Route::get('/manage-textil',[ManageTextileController::class, 'index'])->name('manage-textil');
+<<<<<<< HEAD
+=======
+Route::get('/kelola-koin',[KelolaKoinController::class,'index'])->name('kelola-koin');
+>>>>>>> 2108107010011
 Route::get('/create-user',[ManageUserController::class, 'create'])->name('create-user');
 Route::get('/create-textil',[ManageTextileController::class, 'create'])->name('create-textil');
 Route::post('/simpan-user',[ManageUserController::class, 'store'])->name('simpan-user');

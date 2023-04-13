@@ -20,10 +20,6 @@ use App\Http\Controllers\KelolaDonasiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
     return view('landingpage');
 });
 

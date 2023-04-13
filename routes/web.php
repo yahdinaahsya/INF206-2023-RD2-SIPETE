@@ -23,6 +23,22 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get('/halamanjual', function () {
+    return view('halamanjual');
+});
+
+Route::get('/halamanprosedur', function () {
+    return view('halamanprosedur');
+});
+
+Route::get('/pengelolaan', function () {
+    return view('pengelolaan');
+});
+
+Route::get('/reqsuccess', function () {
+    return view('reqsuccess');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

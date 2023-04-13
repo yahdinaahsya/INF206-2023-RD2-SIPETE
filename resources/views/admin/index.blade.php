@@ -10,10 +10,8 @@
 @section('content')
     <!-- ======================= Cards ================== -->
     <img src="{{ asset('assets/imgs/gambarback.png') }}" alt="gambarback" id="gambarback">
-<<<<<<< HEAD
+
     <h2 class="overview ">Overview</h2>
-=======
->>>>>>> 2108107010011
     <div class="cardBox">
         <div class="card">
             <div>
@@ -51,7 +49,7 @@
     </div>
 
     <!-- ================ Order Details List ================= -->
-<<<<<<< HEAD
+
     <div class="detail-index">
         <div class="recentOrders-index">
             <div class="cardHeader">
@@ -67,7 +65,7 @@
 
 
             <section class="management">
-=======
+
     <div class="container mx-auto">
         <h1 class="text-2xl font-bold text-center mb-4">Statistics</h1>
         <canvas id="myChart"></canvas>
@@ -90,7 +88,7 @@
 
 
     {{-- <section class="management">
->>>>>>> 2108107010011
+
                 <h2>Manajemen</h2>
                 <div class="card-group">
                     <div class="card">
@@ -109,15 +107,13 @@
                         <a href="#" class="button">Kelola</a>
                     </div>
                 </div>
-<<<<<<< HEAD
+
+            </section>
+    {{-- <table>
+
             </section>
 
             {{-- <table>
-=======
-            </section> --}}
-
-    {{-- <table>
->>>>>>> 2108107010011
                 <thead>
                     <tr>
                         <td>Id Order </td>
@@ -143,13 +139,9 @@
 
                 </tbody>
             </table> --}}
-<<<<<<< HEAD
+
         </div>
         @parent
-=======
-    </div>
-    @parent
->>>>>>> 2108107010011
 
     </div>
     </div>

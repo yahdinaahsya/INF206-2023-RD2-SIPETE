@@ -21,9 +21,6 @@ toggle.onclick = function () {
 };
 
 
-<<<<<<< HEAD
-//img di manage textil
-=======
 // Memasukkan data
 
 const data = {
@@ -79,4 +76,4 @@ var myChart = new Chart(
   document.getElementById('myChart'),
   config
 );
->>>>>>> 2108107010011
+

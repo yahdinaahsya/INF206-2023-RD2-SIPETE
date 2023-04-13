@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<<<<<<< HEAD
+    <div class="details">
+=======
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <div class="flex items-center justify-between py-4 bg-white dark:bg-gray-800">
             <div>
@@ -311,6 +314,7 @@
     </div>
 
     {{-- <div class="details">
+>>>>>>> 2108107010011
         <div class="recentOrders">
             <div class="cardHeader">
                 <h2>Manage Users</h2>
@@ -320,7 +324,11 @@
                             class="fas fa-plus-square"></i></a>
                 </div>
             </div>
+<<<<<<< HEAD
+            <table class="table-auto">
+=======
             <table class="table-fixed">
+>>>>>>> 2108107010011
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -345,7 +353,10 @@
                             <td><button>Edit</button><button>Delete</button></td>
                         </tr>
                     @endforeach
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2108107010011
                 </tbody>
             </table>
         </div>
@@ -372,10 +383,16 @@
                         </tr>
                     @endforeach
                 @endif
+<<<<<<< HEAD
+            </table>
+        </div>
+    </div>
+=======
 
             </table>
         </div>
     </div> --}}
+>>>>>>> 2108107010011
 @endsection
 
 @section('foooter')

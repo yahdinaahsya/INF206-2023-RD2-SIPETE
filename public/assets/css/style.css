@@ -222,8 +222,13 @@ body {
   position: relative;
   align-items: center;
   width: 100%;
+<<<<<<< HEAD
+  padding: 20px;
+  padding-top: 8rem;
+=======
   padding: 10px;
   padding-top: 4rem;
+>>>>>>> 2108107010011
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
@@ -237,7 +242,11 @@ body {
 .cardBox .card {
   position: relative;
   background: var(--white);
+<<<<<<< HEAD
+  padding: 30px;
+=======
   padding: 20px;
+>>>>>>> 2108107010011
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -276,7 +285,10 @@ body {
 /* ================== Order Details List ============== */
 .details {
   position: relative;
+<<<<<<< HEAD
+=======
   align-items: center;
+>>>>>>> 2108107010011
   width: 100%;
   padding: 20px;
   display: grid;
@@ -303,12 +315,15 @@ body {
   border-radius: 20px;
 }
 
+<<<<<<< HEAD
+=======
 .detail-index .recentOrders-index h2 {
   font-size: 2.25rem;
   line-height: 2.5rem;
 
 }
 
+>>>>>>> 2108107010011
 .detail-index .cardHeader {
   display: flex;
   justify-content: space-between;
@@ -425,7 +440,11 @@ body {
   position: relative;
   display: grid;
   min-height: 500px;
+<<<<<<< HEAD
+  padding: 20px;
+=======
   padding: 1rem;
+>>>>>>> 2108107010011
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
@@ -449,7 +468,11 @@ body {
 }
 
 .recentCustomers table tr td {
+<<<<<<< HEAD
+  padding: 12px 10px;
+=======
   padding: 1px 1px;
+>>>>>>> 2108107010011
 }
 
 .recentCustomers table tr td h4 {
@@ -619,6 +642,8 @@ body {
 
   border-radius: 6px;
 
+<<<<<<< HEAD
+=======
 }
 
 .table-fixed {
@@ -631,4 +656,5 @@ body {
   height: 200px;
   width: 400px;
   margin-top: 10rem;
+>>>>>>> 2108107010011
 }

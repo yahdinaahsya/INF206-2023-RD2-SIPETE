@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <style>
   .form-group {
     margin-bottom: 20px;

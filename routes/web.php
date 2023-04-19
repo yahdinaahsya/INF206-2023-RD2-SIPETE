@@ -49,17 +49,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::middleware('checkRole:admin')->group(function (){
+        Route::get('/admin',[AdminController::class, 'index'])->name('admin');
+        Route::get('/manage-user',[ManageUserController::class, 'index'])->name('manage-user');
+        Route::get('/kelola-donasi',[KelolaDonasiController::class,'index'])->name('kelola-donasi');
+        Route::get('/manage-textil',[ManageTextileController::class, 'index'])->name('manage-textil');
+        Route::get('/kelola-koin',[KelolaKoinController::class,'index'])->name('kelola-koin');
+        Route::get('/create-user',[ManageUserController::class, 'create'])->name('create-user');
+        Route::get('/create-textil',[ManageTextileController::class, 'create'])->name('create-textil');
+        Route::post('/simpan-user',[ManageUserController::class, 'store'])->name('simpan-user');
+        Route::post('/simpan-textil',[ManageTextileController::class, 'store'])->name('simpan-textil');
+    });
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('/admin',[AdminController::class, 'index'])->name('admin');
-Route::get('/manage-user',[ManageUserController::class, 'index'])->name('manage-user');
-Route::get('/kelola-donasi',[KelolaDonasiController::class,'index'])->name('kelola-donasi');
-Route::get('/manage-textil',[ManageTextileController::class, 'index'])->name('manage-textil');
-Route::get('/kelola-koin',[KelolaKoinController::class,'index'])->name('kelola-koin');
-Route::get('/create-user',[ManageUserController::class, 'create'])->name('create-user');
-Route::get('/create-textil',[ManageTextileController::class, 'create'])->name('create-textil');
-Route::post('/simpan-user',[ManageUserController::class, 'store'])->name('simpan-user');
-Route::post('/simpan-textil',[ManageTextileController::class, 'store'])->name('simpan-textil');
 

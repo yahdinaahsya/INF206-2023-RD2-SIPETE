@@ -9,6 +9,9 @@ use App\Models\TableUserModel;
 use App\Models\TableTextilModel;
 use App\Http\Controllers\KelolaDonasiController;
 use App\Http\Controllers\KelolaKoinController;
+use App\Http\Controllers\SearchController;
+use App\Http\Middleware\CheckRole;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::middleware('checkRole:admin')->group(function (){
+    Route::middleware([CheckRole::class.':admin'])->group(function (){
         Route::get('/admin',[AdminController::class, 'index'])->name('admin');
         Route::get('/manage-user',[ManageUserController::class, 'index'])->name('manage-user');
         Route::get('/kelola-donasi',[KelolaDonasiController::class,'index'])->name('kelola-donasi');
@@ -63,7 +66,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/create-user',[ManageUserController::class, 'create'])->name('create-user');
         Route::get('/create-textil',[ManageTextileController::class, 'create'])->name('create-textil');
         Route::post('/simpan-user',[ManageUserController::class, 'store'])->name('simpan-user');
+        Route::get('/manage-user/cari',[ManageUserController::class, 'cari'])->name('cari');
         Route::post('/simpan-textil',[ManageTextileController::class, 'store'])->name('simpan-textil');
+        Route::get('/search', [SearchController::class, 'search'])->name('search');
+        // Route::post('/search', [SearchController::class, 'search'])->name('search.post');
+        Route::get('/count', function () {
+            $count = DB::table('users')->count(); // Hitung jumlah data di dalam tabel
+            return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
+        });
+        
     });
 });
 

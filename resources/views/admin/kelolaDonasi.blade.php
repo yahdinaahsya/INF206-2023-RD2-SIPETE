@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <div class="flex items-center justify-between pb-4">
             <div>
@@ -281,8 +280,8 @@
                 </tbody>
             </table>
             {{-- <a href="{{ route('create-textil') }}" class="btn">Tambah</a> --}}
-        </div>
-        @parent
+    </div>
+    @parent
 
     </div>
     <style>

@@ -115,10 +115,14 @@
                 </div>
 
                 <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    <form action="{{ route('search') }}" method="GET">
+                        @csrf
+                        <label for="keyword">
+                            <input type="text" placeholder="Search here" id="keyword" class="form-control"
+                                name="keyword value="{{ old('keyword') }}" required>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </form>
                 </div>
 
                 <div class="user">

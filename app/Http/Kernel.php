@@ -50,7 +50,9 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\RedirectIfNotAdmin::class,
         ],
         'auth' =>[ \App\Http\Middleware\Authenticate::class,
-        ]
+         ],
+        'checkrole' =>[ \App\Http\Middleware\CheckRole::class,
+         ]
     ];
 
     /**

@@ -66,28 +66,28 @@
 
             <section class="management">
 
-    <div class="container mx-auto">
-        <h1 class="text-2xl font-bold text-center mb-4">Statistics</h1>
-        <canvas id="myChart"></canvas>
-    </div>
+                <div class="container mx-auto">
+                    <h1 class="text-2xl font-bold text-center mb-4">Statistics</h1>
+                    <canvas id="myChart"></canvas>
+                </div>
 
 
-    {{-- <div class="detail-index">
+                {{-- <div class="detail-index">
         <div class="recentOrders-index">
             <div class="cardHeader">
                 <h1
                     class="text-4xl font-semibold text-center mt-6 sm:mt-[20vh] ml-auto mr-auto mb-10 sm:mb-16 flex gap-2 items-center justify-center">
                     Dashboard</h1> {{-- <a href="#" class="btn">View All</a> --}}
-    {{-- </div> --}}
+                {{-- </div> --}}
 
-    {{-- <section class="welcome">
+                {{-- <section class="welcome">
                 <h2>Selamat datang, Admin!</h2>
                 <p>Ini adalah halaman dashboard SIPETE (Sistem Pengolahan Limbah Textil).</p>
             </section> --}}
 
 
 
-    {{-- <section class="management">
+                {{-- <section class="management">
 
                 <h2>Manajemen</h2>
                 <div class="card-group">

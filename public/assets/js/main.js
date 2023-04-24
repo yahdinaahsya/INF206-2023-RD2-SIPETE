@@ -21,8 +21,11 @@ toggle.onclick = function () {
 };
 
 
-// Memasukkan data
-
+// data untuk statistik
+// ini bagian dari data setiap bulan dan tahun
+// ini berada di dashboard
+// 3 atributnya adalah
+// views, penjualan, dan donasi
 const data = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
   datasets: [
@@ -76,4 +79,87 @@ var myChart = new Chart(
   document.getElementById('myChart'),
   config
 );
+
+// ---------------------------------------
+// ini fungsi untuk search di admin
+// fungsi ini akan mencari keyword 
+
+// take elemen input dan tombol pencarian halaman admin
+const searchInput = document.querySelector('.search input');
+const searchButton = document.querySelector('.search ion-icon');
+
+// menambahkan event listener pencarian di halaman admin
+searchButton.addEventListener('click',function(){
+  //take ka14ta kunci pencarian
+  const keyword = searchInput.value;
+
+});
+
+// menambahkan search event listener pada input
+searchInput.addEventListener('keyup', function(event){
+  // jika tombol enter ditekan lakukan proses pencarian
+  if(event.keyCode ===13){
+    const keyword = searchInput.value;
+    //proses pencarian
+  }
+});
+
+
+
+//fungsi untuk menghitung jumlah user di dashboard admin
+function getCount() {
+  // Kirim permintaan AJAX ke URL yang mengembalikan jumlah data
+  fetch('/count')
+    .then(response => response.json())
+    .then(data => {
+      // Menampilkan jumlah data pada elemen HTML dengan kelas "numbers"
+      document.querySelector('.numbers').textContent = data.count;
+    })
+    .catch(error => console.error(error));
+}
+
+// Panggil fungsi getCount() saat halaman dimuat
+document.addEventListener('DOMContentLoaded', getCount);
+
+
+
+// ---------------------------------------------------
+//pencarian data di halaman admin
+
+    function searchKeyword() {
+        var keyword = document.getElementById('keyword').value.toLowerCase();
+        var textElements = document.querySelectorAll('body *:not(script)');
+        var found = false;
+        for (var i = 0; i < textElements.length; i++) {
+            var elementText = textElements[i].textContent.toLowerCase();
+            if (elementText.includes(keyword)) {
+                textElements[i].style.backgroundColor = "#ffff66";
+                found = true;
+            } else {
+                textElements[i].style.backgroundColor = "";
+            }
+        }
+        if (!found) {
+            var messageElement = document.createElement("div");
+            messageElement.innerText = "No results found for '" + keyword + "'";
+            messageElement.style.backgroundColor = "#f44336";
+            messageElement.style.color = "white";
+            messageElement.style.padding = "10px";
+            messageElement.style.position = "absolute";
+            messageElement.style.top = "50%";
+            messageElement.style.left = "50%";
+            messageElement.style.transform = "translate(-50%, -50%)";
+            document.body.appendChild(messageElement);
+            setTimeout(function() {
+                messageElement.remove();
+            }, 3000);
+        }
+    }
+
+    document.getElementById('keyword').addEventListener('input', function() {
+        for (var i = 0; i < textElements.length; i++) {
+            textElements[i].style.backgroundColor = "";
+        }
+        searchKeyword();
+    });
 

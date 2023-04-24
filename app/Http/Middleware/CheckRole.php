@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\AdminController;
 class CheckRole
 {
     /**
@@ -14,22 +14,25 @@ class CheckRole
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+ 
+    public function handle(Request $request, Closure $next, ...$roles): Response
     {
-        //jika akun yang login sesuai dengan role 
-        //maka silahkan akses
-        //jika tidak sesuai akan diarahkan ke home
+        $user = Auth::user();
 
-        $roles = array_slice(func_get_args(), 2);
+        if (! $user) {
+            return redirect('/login');
+        }
 
         foreach ($roles as $role) {
-            // dd(Auth::user());
-            $user = Auth::user()->role;
-            if ($user == $role) {
-                return $next($request);
+            if ($user->role == $role) {
+                if ($role == 'admin') {
+                    return $next($request);
+                } else {
+                    return redirect()->action([UserController::class, 'index']);
+                }
             }
         }
 
-        return redirect('/');
+        return redirect('/admin');
     }
 }

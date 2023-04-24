@@ -29,6 +29,10 @@ Route::get('/halamanjual', function () {
     return view('halamanjual');
 });
 
+Route::get('/halamandonasi', function () {
+    return view('halamandonasi');
+});
+
 Route::get('/halamanprosedur', function () {
     return view('halamanprosedur');
 });

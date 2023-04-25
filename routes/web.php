@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get('/redeemkoin', function () {
+    return view('redeemkoin');
+});
+
 Route::get('/halamanjual', function () {
     return view('halamanjual');
 });

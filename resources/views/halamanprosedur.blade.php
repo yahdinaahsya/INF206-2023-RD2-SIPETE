@@ -10,6 +10,7 @@
       body {
         font-family: Arial, sans-serif;
         font-size: 16px;
+        margin-top: 50px;
       }
       .container {
         max-width: 960px;
@@ -43,11 +44,11 @@
       }
       .btn {
         position: absolute;
-        top: 212px;
+        bottom: 9px;
         right: 58%;
         transform: translate(50%, -50%);
         padding: 8px 20px;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: bold;
         background-color: #F3CA3A;
         color: white;
@@ -59,8 +60,8 @@
        }
        .lihat-info {
         position: absolute;
-        bottom: 122px;
-        left: 31%;
+        bottom: 30px;
+        left: 27%;
         transform: translateX(-50%);
         background-color: #599544;
         padding: 8px 25px;
@@ -74,7 +75,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container ">
       <h1>Prosedur Donasi Sipete</h1>
       <div class="step">
         <div class="step-number">1.</div>

@@ -28,6 +28,10 @@ Route::get('/Landingpage', function () {
     return view('landingpage');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
 Route::get('/redeemkoin', function () {
     return view('redeemkoin');
 });

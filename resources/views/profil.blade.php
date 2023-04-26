@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <!--nitya dan-->
+    <!--foto nitiya dan ilmi-->
     <div class="h-screen  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
         <!--foto nitiya-->
         <div class="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
@@ -66,6 +66,7 @@
 
     </div>
 
+    
     <div class="h-screen  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
         <!--foto nitiya-->
         <div class="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">

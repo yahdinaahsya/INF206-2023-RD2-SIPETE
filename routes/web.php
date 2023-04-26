@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
+Route::get('/Landingpage', function () {
     return view('landingpage');
 });
 

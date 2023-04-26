@@ -25,11 +25,32 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+        // ini adalah untuk 
+        // authenticate fungsi kontroller
+        // dimana nanti setelah login menggunakan role admin
+        // maka akan langsung dibawah ke halaman admin
+        // jika tidak maka akan tetapi dilanding pagenya
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+    
+        $credentials = $request->only('email', 'password');
+    
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+    
+            // Redirect user to the appropriate page based on their role
+            if (Auth::user()->role === 'admin') {
+                return redirect()->intended('/admin');
+            } else {
+                return redirect()->intended(RouteServiceProvider::HOME);
+            }
+        }
+    
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
 
     /**

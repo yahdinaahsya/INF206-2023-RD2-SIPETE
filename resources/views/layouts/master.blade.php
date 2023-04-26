@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css">
+
 
 </head>
 
@@ -61,6 +64,15 @@
                         <span class="title">Kelola Donasi</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="{{ route('kelola-koin') }}">
+                        <span class="icon">
+                            <ion-icon name="gift-outline"></ion-icon>
+                        </span>
+                        <span class="title">Kelola Koin</span>
+                    </a>
+                </li>
                 {{-- <li>
                     <a href="#">
                         <span class="icon">
@@ -103,10 +115,14 @@
                 </div>
 
                 <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    <form action="{{ route('search') }}" method="GET">
+                        @csrf
+                        <label for="keyword">
+                            <input type="text" placeholder="Search here" id="keyword" class="form-control"
+                                name="keyword value="{{ old('keyword') }}" required>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </form>
                 </div>
 
                 <div class="user">

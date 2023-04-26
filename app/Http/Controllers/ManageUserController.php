@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TableUserModel;
 use Illuminate\Support\Facades\Storage;
-
+use App\Models\User;
 class ManageUserController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class ManageUserController extends Controller
      * 
      */
     public function index()
-    {   $datauser = TableUserModel::all();
+    {   $datauser = User::all();
         return view('admin.manageUser', compact('datauser'));
     }
 
@@ -53,12 +53,13 @@ class ManageUserController extends Controller
     }
 
     // menyimpan data user ke database
-    TableUserModel::create([
-        'nama' => $request->nama,
+    User::create([
+        'name' => $request->name,
         'email' => $request->email,
-        'alamat' => $request->alamat,
-        'tgllhr' => $request->tgllhr,
-        'provinsi' => $request->provinsi,
+        // 'alamat' => $request->alamat,
+        // 'tgllhr' => $request->tgllhr,
+        // 'provinsi' => $request->provinsi,
+        'role'=>$request->role,
         'gambar' => $filename,
     ]);
 
@@ -66,6 +67,20 @@ class ManageUserController extends Controller
 }
 
 
+public function cari(Request $request)
+{
+	// menangkap data pencarian
+	$cari = $request->keyword;
+ 
+ 	// mengambil data dari table us sesuai pencarian data
+	$users = DB::table('users')
+	->where('users_nama','like',"%".$keyword."%")
+	->paginate();
+ 
+    	// mengirim data users ke view index
+	return view('admin.manageUser',['users' => $users]);
+ 
+}
     /**
      * Display the specified resource.
      */

@@ -276,6 +276,7 @@ body {
 /* ================== Order Details List ============== */
 .details {
   position: relative;
+  align-items: center;
   width: 100%;
   padding: 20px;
   display: grid;
@@ -300,6 +301,13 @@ body {
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+}
+
+
+.detail-index .recentOrders-index h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+
 }
 
 .detail-index .cardHeader {
@@ -612,4 +620,17 @@ body {
 
   border-radius: 6px;
 
+
+}
+
+.table-fixed {
+  table-layout: auto;
+}
+
+#myChart {
+  transform: rotate(0deg);
+  transform-origin: left top;
+  height: 200px;
+  width: 400px;
+  margin-top: 10rem;
 }

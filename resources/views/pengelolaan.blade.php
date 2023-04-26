@@ -35,7 +35,7 @@
     <div class="flex sm:flex-nowrap flex-wrap justify-center">
         <div class="p-10 my-10 mx-5 sm:mx-36 bg-gray-200 hover:bg-gray-300 rounded-3xl">
             <p class="font-bold text-xl text-center font-Arial">Donasi</p><br>
-            <a href="#">
+            <a href="/halamandonasi">
                 <div class="m-auto">
                 <img
                 src="{{asset('images/donasi.png')}}"
@@ -69,3 +69,4 @@
 </div>
 
 @endsection
+

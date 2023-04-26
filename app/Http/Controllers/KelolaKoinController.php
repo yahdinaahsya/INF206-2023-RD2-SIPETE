@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB; // tambahkan ini untuk mengimpor namespace DB
 
-class AdminController extends Controller
+class KelolaKoinController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.index');
+        return view('admin.kelolaKoin');
     }
 
     /**
@@ -62,6 +61,4 @@ class AdminController extends Controller
     {
         //
     }
-    
-    
 }

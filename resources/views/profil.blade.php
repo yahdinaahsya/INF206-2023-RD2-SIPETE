@@ -57,7 +57,7 @@
             <div class=" ">
                 <div class="text-center px-14">
                     <h2 class="font-serif text-gray-800 text-4xl font-bold">Bg putin</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(21081070100)</h2>
+                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010079)</h2>
                     <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@bg_putin.official</a>
                     <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Hidup seperti larry</p>
                 </div>

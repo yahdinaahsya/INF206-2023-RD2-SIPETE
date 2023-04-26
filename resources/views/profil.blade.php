@@ -25,8 +25,8 @@
     </div>
 
     <!--foto nitiya dan ilmi-->
-    <div class="h-screen  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
-        <!--foto nitiya-->
+    <div class="h-screen -mb-56  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
+        <!--foto nizar-->
         <div class="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
             <div class=" h-56 overflow-hidden -mb-24 " >
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
@@ -45,7 +45,7 @@
             </div>
         </div>
         
-        <!--foto ilmi-->
+        <!--foto riyan-->
         <div class="container ml-20 lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
             <div class=" h-56 overflow-hidden -mb-24 " >
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>

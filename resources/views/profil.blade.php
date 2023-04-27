@@ -95,7 +95,7 @@
         </div>
         
         <!--foto riyan-->
-        <div class="container mt-12 ml-20 lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
+        <div class="container mt-28 ml-20 lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
             <div class=" h-56 overflow-hidden -mb-24 " >
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
             </div>
@@ -108,7 +108,8 @@
                     <h2 class="font-serif text-gray-800 text-3xl font-bold">Riyan Farhan R.</h2>
                     <h2 class="text-gray-700 text-2xl font-bold">(2108107010079)</h2>
                     <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/riyanfarhanramadhan/" target="BLANK()">@riyanfarhanramadhan</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Tidak ada programmer yang sempurna, tapi tiap programmer pasti ingin mencoba menjadi versi terbaik dari dirinya sendiri.</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">Tidak ada programmer yang sempurna, tapi tiap programmer pasti ingin mencoba menjadi versi terbaik dari dirinya sendiri.</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Dan Apabila kamu merasa kurang berguna di dunia ini, ingatlah bahwa setidaknya kamu masih bisa jadi pelampiasan orang lain.</p>
                 </div>
             </div>
         </div>

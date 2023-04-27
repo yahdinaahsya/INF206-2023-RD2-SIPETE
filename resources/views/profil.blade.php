@@ -60,7 +60,7 @@
                     <h2 class="font-serif text-gray-800 text-4xl font-bold">Khairil Ilmi</h2>
                     <h2 class="text-gray-700 text-2xl font-bold">(2108107010011)</h2>
                     <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@bg_putin.official</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">sesungguhnya berkasih lah di antara manusia perindah segala kata kata bahagia </p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">sesungguhnya berkasih lah di antara manusia perindah segala kata kata bahagia informatika</p>
                 </div>
             </div>
         </div>

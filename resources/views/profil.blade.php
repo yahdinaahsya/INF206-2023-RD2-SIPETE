@@ -80,10 +80,16 @@
 
             <div class=" ">
                 <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-4xl font-bold">Bg putin</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(21081070100)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@bg_putin.official</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Hidup seperti larry</p>
+                    <h2 class="font-serif text-gray-800 text-4xl font-bold">M. Nizar Asykary</h2>
+                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010043)</h2>
+                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/_asynzr/" target="BLANK()">@_asynzr</a>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">Tiada yang lebih jago nana selain dina,
+                                                                                            Tiada yg lebih berembun daripada kacamata nitiya,
+                                                                                            Tiada youtuber yang keren selain ilmi,
+                                                                                            Tiada yang menyukai one piece selain nizar,
+                                                                                            Tiada yang lebih cerah daripada senyuman riyan.</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">#fullsenyum</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm ">Klp 2, jaya³</p>
                 </div>
             </div>
         </div>

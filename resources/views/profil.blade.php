@@ -39,8 +39,9 @@
                 <div class="text-center px-14">
                     <h2 class="font-serif text-gray-800 text-3xl font-bold">Nitiya Rihadatul ‘Aisy</h2>
                     <h2 class="text-gray-700 text-2xl font-bold">(2108107010003)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@bg_putin.official</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Kalo bisa jalan kenapa harus duduk</p>
+                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/nitiya_rihaisy/" target="BLANK()">@nitiya_rihaisy</a>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">Kalo bisa jalan kenapa harus duduk</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Kalo bisa dua kenapa harus satu</p>
                 </div>
             </div>
         </div>
@@ -56,10 +57,10 @@
 
             <div class=" ">
                 <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-4xl font-bold">Bg putin</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010079)</h2>
+                    <h2 class="font-serif text-gray-800 text-4xl font-bold">Khairil Ilmi</h2>
+                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010011)</h2>
                     <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@bg_putin.official</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Hidup seperti larry</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">sesungguhnya berkasih lah di antara manusia perindah segala kata kata bahagia </p>
                 </div>
             </div>
         </div>

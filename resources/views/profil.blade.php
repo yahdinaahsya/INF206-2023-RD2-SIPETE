@@ -10,7 +10,7 @@
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
             </div>
             <div class="flex justify-center px-5 ">
-                <img class="h-32 w-56 bg-white p-2 rounded-full   " src="/images/shputin.jpeg"  />
+                <img class="h-40 w-56 bg-white p-2 rounded-full   " src="/images/yahdina.jpeg"  />
             </div>
 
             <div class=" ">
@@ -18,7 +18,7 @@
                     <h2 class="font-serif text-gray-800 text-4xl font-bold">Yahdina Ahsya</h2>
                     <h2 class="text-gray-700 text-2xl font-bold">(2108107010055)</h2>
                     <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/yahdina_a/" target="BLANK()">@yahdina_a</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Hidup seperti larry</p>
+                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Hidup seperti tempe tidak ada yang tahu</p>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
             </div>
             <div class="flex justify-center px-5 ">
-                <img class="h-32 w-56 bg-white p-2 rounded-full" src="/images/shputin.jpeg"  />
+                <img class="h-32 w-56 bg-white p-2 rounded-full" src="/images/nitiya.jpeg"  />
             </div>
 
             <div class=" ">

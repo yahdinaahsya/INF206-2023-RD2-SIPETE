@@ -27,7 +27,7 @@
                     <h1 class="font-extrabold text-1xl  text-slate-700">Pulsa<span
                         class="font-extrabold pl-14">Token Listrik</span> </h1>
                         <div class="inline-flex pr-7  ">
-                            <img class="pr-24 -mr-10" src="/images/pulsa-removebg-preview 1.jpg">
+                            <img class="pr-24 " src="/images/pulsa-removebg-preview 1.jpg">
                             <img class="pl-4  " src="/images/tokenListrik-removebg-preview 1.jpg">
                         </div>
                     <h1 class="font-extrabold pr-9">Klik</h1>

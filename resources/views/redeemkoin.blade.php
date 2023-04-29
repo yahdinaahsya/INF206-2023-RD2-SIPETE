@@ -19,7 +19,7 @@
 
         <div class="text-center -mb-32 ">
             <h1 class="font-extrabold text-8xl text-slate-700">Poin Sipete</h1>
-            <h1 class=" font-[serif]  font-extrabold text-8xl  text-[#118EEA]">$<span 
+            <h1 class=" font-[serif]  font-extrabold text-8xl mb-7 text-[#118EEA]">$<span 
                 class=" font-extrabold  text-[#47A7EF]">100</span> </h1> <!--poin dan uang dolar-->
 
                 <div class=""> <!--tukar poin dan lambangnya-->

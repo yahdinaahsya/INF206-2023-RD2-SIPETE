@@ -24,7 +24,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/Landingpage', function () {
+=======
+Route::get('landingpage', function () {
+>>>>>>> 2662031a7a07860c2b80ad574460fb3ce640bd98
     return view('landingpage');
 });
 
@@ -46,6 +50,10 @@ Route::get('/halamanprosedur', function () {
 
 Route::get('/pengelolaan', function () {
     return view('pengelolaan');
+});
+
+Route::get('/halamantentang', function () {
+    return view('halamantentang');
 });
 
 Route::get('/reqsuccess', function () {

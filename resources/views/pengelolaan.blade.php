@@ -4,12 +4,11 @@
 
 <div class="grid md:grid-cols-2 xl:mx-20 my-20 w-full">
     <div class="pl-20 my-10 sm:my-20 items-end object-left ">
-        <p class="text-5xl font-medium font-Arial m-2 ml-0 ">
-            Mari Berpartisipasi
-        </p>
-        <p class="text-5xl text-[#0B63F8] font-medium font-Arial color-blue m-4 ml-0">Kelola Limbah<br>Tekstil Disini
-        </p>
-        <p class="text-[#505F98] text-justify font-Arial ml-0">
+    <h1 class=" mb-5 font-[arial] font-extrabold tracking-tighter text-6xl">
+        Mari Berpartisipasi</h1>
+    <h1 class=" mb-5 font-[arial] text-6xl font-extrabold  text-[#0B63F8]  ">
+        Kelola Limbah <br> Tekstil Disini</h1>
+        <p class="text-[#505F98] text-2xl text-justify font-Arial ml-0">
             Jadilah Bagian Dari Kami
         </p>
         <br>
@@ -19,6 +18,7 @@
             </a>
         </p>
     </div>
+    
     <div >
         <div>
             <br><br>
@@ -30,7 +30,7 @@
 </div>
 
 <div class="my-20 w-full">
-    <p class="text-2xl text-[#224957] text-center font-bold font-Arial ">Ayo Kelola Limbah Tekstil Anda Disini</p>
+    <p class="text-2xl text-[#224957] text-center font-extrabold font-[arial] ">Ayo Kelola Limbah Tekstil Anda Disini</p>
     <br>
     <div class="flex sm:flex-nowrap flex-wrap justify-center">
         <div class="p-10 my-10 mx-5 sm:mx-36 bg-gray-200 hover:bg-gray-300 rounded-3xl">

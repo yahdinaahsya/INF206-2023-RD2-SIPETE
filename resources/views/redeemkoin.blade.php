@@ -5,7 +5,7 @@
     <div class="mx-auto my-auto py-auto px-auto ">
 
         <!-- Tukar Pulsa -->
-        <div class="flex pt-24  ">
+        <div class="flex pt-24 -mb-36 ">
             <div>
                 <img  class=" h-64 w-auto" src="/images/Ellipse 10.jpg">
             </div>

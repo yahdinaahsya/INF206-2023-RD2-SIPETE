@@ -34,7 +34,7 @@
                 </div>
         </div>
 
-        <div class="flex pt-44 -mb-20">
+        <div class="flex pt-44 ">
             <div>
                 <img class="h-56 w-screen max-w-full" src="/images/Rectangle 4.png">
             </div>

@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
+Route::get('landingpage', function () {
     return view('landingpage');
 });
 
@@ -42,6 +42,10 @@ Route::get('/halamanprosedur', function () {
 
 Route::get('/pengelolaan', function () {
     return view('pengelolaan');
+});
+
+Route::get('/halamantentang', function () {
+    return view('halamantentang');
 });
 
 Route::get('/reqsuccess', function () {

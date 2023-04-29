@@ -4,7 +4,7 @@
 <div class="mx-auto my-auto py-auto px-auto">
 
     <!--foto yahdina-->
-    <div class="h-screen -mb-56  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
+    <div class="h-screen -mb-48  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
         <div class="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
             <div class=" h-56 overflow-hidden -mb-24 " >
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
@@ -100,7 +100,7 @@
                 <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
             </div>
             <div class="flex justify-center px-5 ">
-                <img class="h-40 w-56 bg-white p-2 rounded-full" src="/images/shputin.jpeg"  />
+                <img class="h-40 w-56 bg-white p-2 rounded-full" src="/images/riyann.jpeg"  />
             </div>
 
             <div class=" ">

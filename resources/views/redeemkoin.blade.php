@@ -39,7 +39,7 @@
                 <img class="h-56 w-screen max-w-full" src="/images/Rectangle 4.png">
             </div>
             <div class="absolute pt-20 pl-96">
-                <img class=" relative h-14 pl-96 ml-56" src="/images/lambangsosmed.jpg">
+                <img class=" relative h-14 pl-96 " src="/images/lambangsosmed.jpg">
             </div>
         </div>
     </div>

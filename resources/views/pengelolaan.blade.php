@@ -13,7 +13,7 @@
         </p>
         <br>
         <p>
-            <a href="/#" class ="bg-[#118EEA] inline block p-3 px-19 text-center text-white font-medium font-Arial ml-0">
+            <a href="/halamantentang" class ="bg-[#118EEA] inline block p-3 px-19 text-center text-white font-medium font-Arial ml-0">
                 Tentang Kami
             </a>
         </p>
@@ -51,7 +51,7 @@
         </div>
         <div class="p-10 my-10 mx-5 sm:mx-36 bg-gray-200 hover:bg-gray-300 rounded-3xl">
             <p class="font-bold text-xl text-center font-Arial">Daur Ulang</p><br>
-            <a href="/halamanprosedur">
+            <a href="/halamanjual">
                 <div class="m-auto">
                 <img
                 src="{{asset('images/reduce.png')}}"

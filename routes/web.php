@@ -65,7 +65,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
+
     Route::post('/simpan-jual', [JualController::class, 'store'])->name('simpan-jual');
+
+    Route::middleware([CheckRole::class . ':user'])->group(function () {
+      
+    });
+
 
     Route::middleware([CheckRole::class . ':admin'])->group(function () {
         Route::get('/admin', [AdminController::class, 'index'])->name('admin');
@@ -95,9 +101,9 @@ Route::middleware('auth')->group(function () {
             $count = DB::table('users')->count(); // Hitung jumlah data di dalam tabel
             return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
         });
+
         // menampilkan statistik geograpy indonesia
         Route::get('/statistika-geograpy', [StatistikaGeograpiIndonesiaController::class, 'index'])->name('statistika-geograpy');
-
     });
 });
 

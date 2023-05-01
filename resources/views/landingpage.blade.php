@@ -36,12 +36,13 @@
         </div>
         <div class=" pt-16">
             <img class="h-screen max-w-7xl mx-auto" src="images/pengolahan1.jpg">
-            <div class="h-24 mx-16 pb- bg-gradient-to-r from-cyan-500 to-blue-500">
+            <div class="h-24 mx-16   bg-gradient-to-r from-cyan-500 to-blue-500">
                 <div class="flex pt-16">
                     <img class="h-auto max-w-lg pl-16" src="images/pengolahan2.jpg">
                     <img class="h-auto max-w-lg ml-40 " src="images/pengolahan3.jpg">
                 </div>
             </div>
+            <div class="mt-96 pt-32">
         </div>
     </div>
 @endsection

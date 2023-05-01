@@ -9,7 +9,7 @@
 
 @section('content')
     <!-- ======================= Cards ================== -->
-    <img src="{{ asset('assets/imgs/gambarback.png') }}" alt="gambarback" id="gambarback">
+    <img src="{{ asset('images/gambarback.png') }}" alt="gambarback" id="gambarback">
 
     <h2 class="overview ">Overview</h2>
     <div class="cardBox">

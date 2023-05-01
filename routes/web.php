@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManageUserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FotoProfilAdminController;
 use App\Http\Controllers\ManageTextileController;
 use App\Models\TableUserModel;
 use App\Models\TableTextilModel;
@@ -12,6 +13,7 @@ use App\Http\Controllers\KelolaKoinController;
 use App\Http\Controllers\SearchController;
 use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,26 +63,37 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::middleware([CheckRole::class.':admin'])->group(function (){
-        Route::get('/admin',[AdminController::class, 'index'])->name('admin');
-        Route::get('/manage-user',[ManageUserController::class, 'index'])->name('manage-user');
-        Route::get('/kelola-donasi',[KelolaDonasiController::class,'index'])->name('kelola-donasi');
-        Route::get('/manage-textil',[ManageTextileController::class, 'index'])->name('manage-textil');
-        Route::get('/kelola-koin',[KelolaKoinController::class,'index'])->name('kelola-koin');
-        Route::get('/create-user',[ManageUserController::class, 'create'])->name('create-user');
-        Route::get('/create-textil',[ManageTextileController::class, 'create'])->name('create-textil');
-        Route::post('/simpan-user',[ManageUserController::class, 'store'])->name('simpan-user');
-        Route::get('/manage-user/cari',[ManageUserController::class, 'cari'])->name('cari');
-        Route::post('/simpan-textil',[ManageTextileController::class, 'store'])->name('simpan-textil');
+    Route::middleware([CheckRole::class . ':admin'])->group(function () {
+        Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+        // melihat data user
+        Route::get('/manage-user', [ManageUserController::class, 'index'])->name('manage-user');
+        // menampilkan gambar profil
+        Route::get('/manage-foto-profil', [FotoProfilAdminController::class, 'index'])->name('manage-foto-profil');
+        Route::get('/kelola-donasi', [KelolaDonasiController::class, 'index'])->name('kelola-donasi');
+        Route::get('/manage-textil', [ManageTextileController::class, 'index'])->name('manage-textil');
+        Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
+        Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
+        Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
+        // create data user
+        Route::post('/simpan-user', [ManageUserController::class, 'store'])->name('simpan-user');
+        // tampilkan data user
+        Route::get('/tampilkanDataUser/{id}', [ManageUserController::class, 'tampilkanDataUser'])->name('tampilkanDataUser');
+        // update data user
+        Route::post('/updateDataUser/{id}', [ManageUserController::class, 'updateDataUser'])->name('updateDataUser');
+        // delete data user
+        Route::get('/deleteDataUser/{id}', [ManageUserController::class, 'deleteDataUser'])->name('deleteDataUser');
+        // cari user
+        Route::get('/manage-user/cari', [ManageUserController::class, 'cari'])->name('cari');
+        Route::post('/simpan-textil', [ManageTextileController::class, 'store'])->name('simpan-textil');
         Route::get('/search', [SearchController::class, 'search'])->name('search');
         // Route::post('/search', [SearchController::class, 'search'])->name('search.post');
         Route::get('/count', function () {
             $count = DB::table('users')->count(); // Hitung jumlah data di dalam tabel
             return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
         });
-        
+
+
     });
 });
 
-require __DIR__.'/auth.php';
-
+require __DIR__ . '/auth.php';

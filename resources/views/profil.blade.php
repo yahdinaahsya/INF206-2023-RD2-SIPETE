@@ -1,120 +1,43 @@
-@extends ('layouts.app')
+@extends('layouts.app')
 
 @section('content')
-<div class="mx-auto my-auto py-auto px-auto">
 
-    <!--foto yahdina-->
-    <div class="h-screen -mb-48  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
-        <div class="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
-            <div class=" h-56 overflow-hidden -mb-24 " >
-                <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
-            </div>
-            <div class="flex justify-center px-5 ">
-                <img class="h-40 w-56 bg-white p-2 rounded-full   " src="/images/yahdina.jpeg"  />
-            </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-            <div class=" ">
-                <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-4xl font-bold">Yahdina Ahsya</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010055)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/yahdina_a/" target="BLANK()">@yahdina_a</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Hidup seperti tempe tidak ada yang tahu</p>
-                </div>
-            </div>
+<section style="font-family: Montserrat" class=" bg-white flex font-medium items-center justify-center h-screen">
+
+    <section class="w-64 mx-auto bg-[#E7ECFF] rounded-2xl px-8 py-6 shadow-lg">
+        <div class="flex items-center justify-between">
+            <span class="text-gray-400 text-sm">Profil</span>
+            <span class="text-[#118EEA]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+              </svg>
+            </span>
         </div>
-    </div>
-
-    <!--foto nitiya dan ilmi-->
-    <div class="h-screen pt-7 -mb-56  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
-        <!--foto nitiya-->
-        <div class="container lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
-            <div class=" h-56 overflow-hidden -mb-24 " >
-                <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
-            </div>
-            <div class="flex justify-center px-5 ">
-                <img class="h-40 w-56 bg-white p-2 rounded-full" src="/images/nitiya.jpeg"  />
-            </div>
-
-            <div class=" ">
-                <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-3xl font-bold">Nitiya Rihadatul ‘Aisy</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010003)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/nitiya_rihaisy/" target="BLANK()">@nitiya_rihaisy</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">Kalo bisa jalan kenapa harus duduk</p>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Kalo bisa dua kenapa harus satu</p>
-                </div>
-            </div>
+        <div class="mt-6 w-fit mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+        </div>
+        <div class="mt-8 ">
+            <h2 class="text-black font-bold text-2xl tracking-wide">
+                {{Auth::user()->name}}
+            </h2>
         </div>
         
-        <!--foto ilmi-->
-        <div class="container ml-20 lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
-            <div class=" h-56 overflow-hidden -mb-24 " >
-                <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
-            </div>
-            <div class="flex justify-center px-5 ">
-                <img class="h-40 w-56 bg-white p-2 rounded-full" src="/images/ilmi.jpeg"  />
-            </div>
-
-            <div class=" ">
-                <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-3xl font-bold">Khairil Ilmi</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010011)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/khairililmi16_/" target="BLANK()">@khairililmi16_</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">sesungguhnya berkasih lah di antara manusia perindah segala kata kata bahagia informatika</p>
-                </div>
-            </div>
+        <div class="h-1 w-full bg-black mt-8 rounded-full">
+            <div class="h-1 rounded-full w-2/5 bg-[#111B47] "></div>
         </div>
-
-    </div>
-
-    <!--foto nizar dan riyan-->    
-    <div class="h-screen pt-7  bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  ">
-        <!--foto nizar-->
-        <div class="container mt-32 lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
-            <div class=" h-56 overflow-hidden -mb-24 " >
-                <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
-            </div>
-            <div class="flex justify-center px-5 ">
-                <img class="h-40 w-56 bg-white p-2 rounded-full" src="/images/nizar.jpeg"  />
-            </div>
-
-            <div class=" ">
-                <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-3xl font-bold">M. Nizar Asykary</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010043)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/_asynzr/" target="BLANK()">@_asynzr</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">Tiada yang lebih jago nana selain dina,
-                                                                                            Tiada yg lebih berembun daripada kacamata nitiya,
-                                                                                            Tiada youtuber yang keren selain ilmi,
-                                                                                            Tiada yang menyukai one piece selain nizar,
-                                                                                            Tiada yang lebih cerah daripada senyuman riyan.</p>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">#fullsenyum</p>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm ">Klp 2, jaya³</p>
-                </div>
-            </div>
+        <div class="mt-3 text-white text-sm">
+            <span class="text-gray-400 font-semibold">Donasi :</span>
+            <span class="text-gray-600">100</span>
+            <p class="text-[#118EEA] font-semibold mt-2.5" >
+            Jual :
+            </p>
         </div>
-        
-        <!--foto riyan-->
-        <div class="container mt-28 ml-20 lg:w-2/6 xl:w-2/7 sm:w-full md:w-2/3    bg-white  shadow-lg    transform   duration-200 easy-in-out">
-            <div class=" h-56 overflow-hidden -mb-24 " >
-                <img class="" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"/>
-            </div>
-            <div class="flex justify-center px-5 ">
-                <img class="h-40 w-56 bg-white p-2 rounded-full" src="/images/riyann.jpeg"  />
-            </div>
-
-            <div class=" ">
-                <div class="text-center px-14">
-                    <h2 class="font-serif text-gray-800 text-3xl font-bold">Riyan Farhan R.</h2>
-                    <h2 class="text-gray-700 text-2xl font-bold">(2108107010079)</h2>
-                    <a class="font-bold text-gray-600 mt-2 hover:text-blue-500" href="https://www.instagram.com/riyanfarhanramadhan/" target="BLANK()">@riyanfarhanramadhan</a>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm -mb-2">Tidak ada programmer yang sempurna, tapi tiap programmer pasti ingin mencoba menjadi versi terbaik dari dirinya sendiri.</p>
-                    <p class="font-serif mt-2 text-gray-700 font-semibold text-sm">Dan Apabila kamu merasa kurang berguna di dunia ini, ingatlah bahwa setidaknya kamu masih bisa jadi pelampiasan orang lain.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="h-24 bg-gray-200  dark:bg-gray-800   flex flex-wrap items-center  justify-center  "></div>
-</div>
+    </section>
+</section>
 @endsection

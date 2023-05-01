@@ -104,8 +104,11 @@
                         </td>
                         <th scope="row"
                             class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                            {{-- @isset($data) --}}
                             <img class="w-10 h-10 rounded-full" src="{{ asset('storage/assets/profile/' . $item->gambar) }}"
-                                alt="Jese image">
+                                alt="Gambar">
+                            {{-- @endisset --}}
+
                             <div class="pl-3">
                                 <div class="text-base font-semibold">{{ $item->name }}</div>
                             </div>
@@ -118,10 +121,13 @@
                         </td>
                         <td class="px-6 py-4">
                             <!-- Modal toggle -->
-                            <a href="#" type="button" data-modal-target="editUserModal"
+                            <a href="/tampilkanDataUser/{{ $item->id }}" data-modal-target="editUserModal"
                                 data-modal-show="editUserModal"
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit </a>
-                            <button class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                            <a href="/deleteDataUser/{{ $item->id }}" data-modal-target="editUserModal"
+                                data-modal-show="editUserModal"
+                                class="font-medium text-red-600 dark:text-blue-500 hover:underline">Hapus</a>
+
                         </td>
                     </tr>
                 @endforeach

@@ -126,7 +126,7 @@
                 </div>
 
                 <div class="user">
-                    <img src="assets/imgs/putin.jpeg" alt="">
+                    {{-- <img src="assets/imgs/putin.jpeg" alt=""> --}}
                 </div>
             </div>
 

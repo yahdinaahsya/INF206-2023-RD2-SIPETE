@@ -39,8 +39,10 @@
                                 </div>
 
                                 <input type="email" name="email" id="input-email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Email">
+                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 <input type="password" name="password" id="input-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Password">
-
+                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                
                                 <div class="flex justify-first">
                                     <!-- Remember Me -->
                                     <div class="block mt-4">

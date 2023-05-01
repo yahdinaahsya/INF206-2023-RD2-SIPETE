@@ -49,10 +49,12 @@
                                     <div>
                                         <label for="input-password">Password</label>
                                         <input type="password" name="password" id="input-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Password">
+                                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                     </div>
                                     <div>
                                         <label for="input-password-confirm">Confirm Password</label>
                                         <input type="password" name="password_confirmation" id="input-password-confirm" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Confirm Password">
+                                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                     </div>
                                 </div>
 

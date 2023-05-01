@@ -39,6 +39,10 @@ Route::get('/redeemkoin', function () {
     return view('redeemkoin');
 });
 
+Route::get('/pengelolaan', function () {
+    return view('pengelolaan');
+});
+
 Route::get('/halamanjual', function () {
     return view('halamanjual');
 });
@@ -47,20 +51,8 @@ Route::get('/halamandonasi', function () {
     return view('halamandonasi');
 });
 
-Route::get('/halamanprosedur', function () {
-    return view('halamanprosedur');
-});
-
-Route::get('/pengelolaan', function () {
-    return view('pengelolaan');
-});
-
 Route::get('/halamantentang', function () {
     return view('halamantentang');
-});
-
-Route::get('/reqsuccess', function () {
-    return view('reqsuccess');
 });
 
 Route::get('/dashboard', function () {

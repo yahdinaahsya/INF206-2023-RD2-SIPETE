@@ -54,7 +54,7 @@
         <div class="recentOrders-index">
             <div class="cardHeader">
                 <h2>Dashboard</h2>
-                <a href="#" class="btn">View All</a>
+                <a href="{{ route('statistika-geograpy') }}" class="btn">View Indonesia Geograpy Statistics Tekstil</a>
             </div>
 
             <section class="welcome">

@@ -11,6 +11,7 @@ use App\Models\TableTextilModel;
 use App\Http\Controllers\KelolaDonasiController;
 use App\Http\Controllers\KelolaKoinController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\StatistikaGeograpiIndonesiaController;
 use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -95,6 +96,9 @@ Route::middleware('auth')->group(function () {
             $count = DB::table('users')->count(); // Hitung jumlah data di dalam tabel
             return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
         });
+
+        // menampilkan statistik geograpy indonesia
+        Route::get('/statistika-geograpy', [StatistikaGeograpiIndonesiaController::class, 'index'])->name('statistika-geograpy');
     });
 });
 

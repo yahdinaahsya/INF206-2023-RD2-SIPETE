@@ -11,13 +11,25 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" class="form-control" placeholder="nama user">
+                <input type="text" id="name" name="name" class="form-control" placeholder="nama user">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
+                <label for="password]">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select name="role" id="role">
+                    <option value=""></option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+            </div>
+            {{-- <div class="form-group">
                 <label for="provinsi">Provinsi:</label><br>
                 <select id="provinsi" name="provinsi">
                     <option value="Aceh">Aceh</option>
@@ -61,7 +73,7 @@
                     focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm
                     focus:ring-1" placeholder="you@example.com class="">Tanggal Lahir: </label><br>
                 <input type="date" id="tgllhr" name="tgllhr" class="form-control">
-            </div>
+            </div> --}}
             <div class="form-group">
                 <label for="gambar">Gambar</label>
                 <input type="file" name="profile"

@@ -634,3 +634,8 @@ body {
   width: 400px;
   margin-top: 10rem;
 }
+
+.cardHeader .card-tools a {
+  text-align: right;
+  margin-left: 1.5rem;
+}

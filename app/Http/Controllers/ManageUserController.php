@@ -72,6 +72,7 @@ class ManageUserController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'password' => $request->password,
             'role' => $request->role,
             'gambar' => $filename,
         ]);

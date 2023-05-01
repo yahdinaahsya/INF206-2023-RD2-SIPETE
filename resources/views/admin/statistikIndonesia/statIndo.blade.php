@@ -8,6 +8,7 @@
         svg {
             width: 100%;
             height: auto;
+
         }
 
         .legend {
@@ -30,12 +31,13 @@
             line-height: 1;
             overflow-y: visible;
             margin-bottom: 4px;
-
+            text-align: center;
         }
 
         p {
             color: #666;
             margin: 0;
+            text-align: center;
         }
     </style>
     <link href="/dist/output.css" rel="stylesheet">

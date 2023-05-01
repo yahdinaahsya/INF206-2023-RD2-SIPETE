@@ -11,7 +11,7 @@
     <!-- ======================= Cards ================== -->
     <img src="{{ asset('images/gambarback.png') }}" alt="gambarback" id="gambarback">
 
-    <h2 class="overview ">Overview</h2>
+    {{-- <h2 class="overview ">Overview</h2> --}}
     <div class="cardBox">
         <div class="card">
             <div>

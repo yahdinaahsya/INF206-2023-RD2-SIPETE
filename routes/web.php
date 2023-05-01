@@ -71,7 +71,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/simpan-Donasi', [DonasiController::class, 'store'])->name('simpan-Donasi');
 
     Route::middleware([CheckRole::class . ':user'])->group(function () {
-      
+
     });
 
 

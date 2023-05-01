@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="pl-14 pt-40">
+<div class="pl-14 pt-40">
         <div>
             <h1 class="pt-20 mb-5 font-[arial] text-6xl font-extrabold  text-[#0B63F8]  ">Dibuka 24 Jam</h1>
         </div>
@@ -12,10 +12,10 @@
             <h1 class=" pl-1 mb-3 ">Ayo kelola limbah tekstilmu disini</h1>
         </div>
         <div class="pt-4">
-            <button type="button"
+            <a href="/pengelolaan"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Kelola
                 Sekarang
-            </button>
+            </a>
         </div>
     </div>
 
@@ -43,4 +43,5 @@
                 </div>
             </div>
         </div>
+    </div>
 @endsection

@@ -35,7 +35,8 @@
         <h3 class="font-[arial] font-extrabold text-xl">Itulah Visi Misi SIPETE dalam mencegah sebaran sampah tekstil di lingkungan</h3>
     </div>
     <div class="flex justify-center mt-10">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 w-50 rounded">Sign Up</button>
+
+        <a href="{{ url('register') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 w-50 rounded">Sign Up</a>
     </div>
     
     <div>

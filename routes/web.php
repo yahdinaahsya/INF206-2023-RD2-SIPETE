@@ -63,6 +63,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::middleware([CheckRole::class . ':user'])->group(function () {
+      
+    });
+
     Route::middleware([CheckRole::class . ':admin'])->group(function () {
         Route::get('/admin', [AdminController::class, 'index'])->name('admin');
         // melihat data user
@@ -91,8 +95,6 @@ Route::middleware('auth')->group(function () {
             $count = DB::table('users')->count(); // Hitung jumlah data di dalam tabel
             return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
         });
-
-
     });
 });
 

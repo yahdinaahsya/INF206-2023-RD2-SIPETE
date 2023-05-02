@@ -4,13 +4,13 @@
 
 <div class="my-20 w-full">
     
-    <h1 class="text-5xl text-black text-center font-extrabold font-poppins "><br>Prosedure Donasi Sipete</h1>
+    <h1 class="text-5xl text-black text-center font-extrabold font-poppins "><br>Prosedure Jual Sipete</h1>
     <p class="text-3xl text-black text-left m-5 ml-20 font-extrabold font-poppins "><br>1. Mengisi form data diri
         <a href="#">
 <!-- Modal toggle -->
         <div class="flex justify-center">
             <button id="defaultModalButton" data-modal-toggle="defaultModal" class="inline-block rounded-full bg-[#505F98] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]" type="button">
-            Form Donasi
+            Form Jual
             </button>
         </div>
         <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
@@ -40,7 +40,7 @@
                                 <input type="text" name="alamat" id="alamat" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="alamat" required="">
                             </div>
                             <div class="pt-1">
-                                <p>Rencana Tanggal Donasi</p>
+                                <p>Rencana Tanggal Jual</p>
                                 <div>
                                     <div class="relative w-full"> 
                                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"> 
@@ -83,11 +83,11 @@
             
         </p>
         <a>
-    <h1 class="text-3xl text-black text-left font-extrabold font-poppins ml-20">2. Mengirim/Mengantar Donasi
+    <h1 class="text-3xl text-black text-left font-extrabold font-poppins ml-20">2. Mengirim/Mengantar Jual
     </h1>
     <pre class="text-1xl text-[#505F98] text-justify font-bold font-poppins">
-        Bisa mengirim atau mengantar donasi yang telah disiapkan ke alamat tujuan
-        (Harap cantuman nama dan No.hp di paket donasi)
+        Bisa mengirim atau mengantar Jual yang telah disiapkan ke alamat tujuan
+        (Harap cantuman nama dan No.hp di paket Jual)
     </pre>
     <p class="text-3xl text-black text-left m-5 font-extrabold font-poppins ml-20">3. Konfirmasi ke CP:</p>
     <pre class="text-1xl text-[#505F98] text-justify font-bold font-poppins">
@@ -97,7 +97,7 @@
         Tanggal Pengiriman :
         Cara Pengiriman    : (diantar ojek online)
     </pre>
-    <p class="text-3xl text-black text-left  ml-20 font-extrabold font-poppins ">4. Akan mendapatkan konfirmasi jika donasi diterima<br><br>
+    <p class="text-3xl text-black text-left  ml-20 font-extrabold font-poppins ">4. Akan mendapatkan konfirmasi jika Jual diterima<br><br>
     <a href="">
         <button
             type="button"

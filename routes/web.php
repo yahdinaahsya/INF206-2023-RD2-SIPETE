@@ -16,6 +16,7 @@ use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\JualController;
+use App\Http\Controllers\DonasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,6 +68,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::post('/simpan-jual', [JualController::class, 'store'])->name('simpan-jual');
+    Route::post('/simpan-Donasi', [DonasiController::class, 'store'])->name('simpan-Donasi');
 
     Route::middleware([CheckRole::class . ':user'])->group(function () {
       

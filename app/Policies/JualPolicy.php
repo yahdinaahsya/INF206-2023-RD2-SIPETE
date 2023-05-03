@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\jual;
 use Illuminate\Auth\Access\Response;
 
-class JualPolicy
+class jualPolicy
 {
     /**
      * Determine whether the user can view any models.

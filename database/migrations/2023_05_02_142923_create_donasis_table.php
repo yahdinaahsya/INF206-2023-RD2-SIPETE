@@ -18,7 +18,6 @@ return new class extends Migration
             $table->date('tgldonasi');
             $table->string('email')->unique();
             $table->string('no_hp');
-            $table->string('pakaian');
             $table->string('cr_kirim');
             $table->timestamps();
         });

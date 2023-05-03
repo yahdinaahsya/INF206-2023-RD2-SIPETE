@@ -3,18 +3,21 @@
 @section('content')
     <div class="my-20 w-full">
 
-        <h1 class="text-5xl text-black text-center font-extrabold font-poppins "><br>Prosedure Donasi Sipete</h1>
-        <p class="text-3xl text-black text-left m-5 ml-20 font-extrabold font-poppins "><br>1. Mengisi form data diri
+        <h1 class="text-5xl text-black text-center font-extrabold font-poppins ">
+            <br>Prosedure Donasi Sipete</h1>
+        
+        <p class="text-3xl text-black text-left m-5 ml-20 font-extrabold font-poppins ">
+            <br>1. Mengisi form data diri
 
             <a href="#">
                 <!-- Modal toggle -->
-                <div class="flex justify-center">
-                    <button id="defaultModalButton" data-modal-toggle="defaultModal"
-                        class="inline-block rounded-full bg-[#505F98] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                        type="button">
-                        Form Donasi
-                    </button>
-                </div>
+            
+                <button id="defaultModalButton" data-modal-toggle="defaultModal"
+                    class=" ml-5 inline-block rounded-full bg-[#505F98] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                    type="button">
+                    Form Donasi
+                </button>
+                
 
                 <div id="defaultModal" tabindex="-1" aria-hidden="true"
                     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
@@ -109,7 +112,7 @@
                                             placeholder="+62" required="">
                                     </div>
 
-                                    <div>
+                                    <!-- <div>
                                         <label for="category"
                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                             Jenis Pakaian</label>
@@ -118,7 +121,7 @@
                                             <option value="layak">Layak Pakai</option>
                                             <option value="tidaklayak">Tidak Layak Pakai</option>
                                         </select>
-                                    </div>
+                                    </div> -->
 
                                     <div>
                                         <label for="pengiriman"
@@ -146,40 +149,41 @@
                         </div>
                     </div>
                 </div>
-
+            <a>
         </p>
-        <a>
-            <h1 class="text-3xl text-black text-left font-extrabold font-poppins ml-20">
-                2. Mengirim/Mengantar Donasi
-            </h1>
-
+            <p class="text-3xl text-black text-left m-5 font-extrabold font-poppins ml-20">
+                2. Mengirim/Mengantar Donasi</p>
             <pre class="text-1xl text-[#505F98] text-justify font-bold font-poppins">
-            Bisa mengirim atau mengantar Donasi yang telah disiapkan ke alamat tujuan
+            Bisa mengirim atau mengantar Donasi yang telah disiapkan ke <a href="https://www.google.co.id/maps/search/Universitas+Syiah+Kuala/@5.5694652,95.3660805,17z/data=!3m1!4b1" class="underline"><i>alamat tujuan</i></a>
             (Harap cantuman nama dan No.hp di paket Donasi)
             </pre>
+
             <p class="text-3xl text-black text-left m-5 font-extrabold font-poppins ml-20">
                 3. Konfirmasi ke CP:</p>
             <pre class="text-1xl text-[#505F98] text-justify font-bold font-poppins">
-        Format Konfirmasi  :
-        Nama               :
-        No.Hp              :
-        Tanggal Pengiriman :
-        Cara Pengiriman    : (diantar ojek online)
+            Format Konfirmasi  :
+            Nama               :
+            No.Hp              :
+            Tanggal Pengiriman :
+            Cara Pengiriman    : (diantar ojek online)
             </pre>
 
-            <p class="text-3xl text-black text-left  ml-20 font-extrabold font-poppins ">4. Akan mendapatkan konfirmasi
-                jika Donasi diterima<br><br>
-                <a href="">
-                    <button type="button"
-                        class="inline-block rounded-full bg-[#599544] px-6 pb-2 pt-2.5 text-2xl font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                        Lihat info selengkapnya
-                    </button>
-                    <a>
+            <p class="text-3xl text-black text-left  ml-20 font-extrabold font-poppins ">
+                4. Akan mendapatkan konfirmasi jika Donasi diterima<br>
             </p>
-    </div>
 
-    <div>
-        <img class="ml-20" src="images/Rectangle 4.png">
+            <p class="text-3xl text-black text-left  ml-20 font-extrabold font-poppins ">
+            <br>5. Keterangan Donasi</p>
+            <pre class="mt-5 text-1xl text-[#505F98] text-justify font-bold font-poppins">
+            a. Barang yang didonasikan bisa berupa pakaian, barang, atau alat yang sekiranya masi " LAYAK DIPAKAI "
+            b. Barang yang sudah dikirim, nantinya akan didonasikan kepada orang yang membutuhkan atau panti asuhan
+            c. Terkait kemana dan kapan didonasikan, akan dikonfirmasi/dikabari melalui via telepon/email
+            d. Setiap kali melakukan donasi, maka anda akan mendapatkan 5 koin
+            </pre>
+            
+            <div>
+                <img class="ml-20" src="images/Rectangle 4.png">
+            </div>
     </div>
     
 @endsection

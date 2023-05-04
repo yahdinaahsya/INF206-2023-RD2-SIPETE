@@ -83,7 +83,7 @@ class ManageUserController extends Controller
             'gambar' => $filename,
         ]);
 
-        return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
+        // return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
     }
 
 

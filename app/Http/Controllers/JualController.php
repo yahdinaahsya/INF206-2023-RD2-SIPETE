@@ -28,18 +28,17 @@ class JualController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StorejualRequest $request)
-    {   
+    {
         jual::create([
             'nama' => $request->name,
-            'alamat' => $request -> alamat,
-            'tgldonasi' => $request -> tanggal,
+            'alamat' => $request->alamat,
+            'tgldonasi' => $request->tanggal,
             'email' => $request->email,
-            'no_hp' => $request -> telepon,
-            'pakaian' => $request -> pakaian,
-            'cr_kirim' => $request -> pengiriman
+            'no_hp' => $request->telepon,
+            'pakaian' => $request->pakaian,
+            'cr_kirim' => $request->pengiriman,
         ]);
-
-        return redirect()->back();
+        return redirect()->route('halamanjual')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**

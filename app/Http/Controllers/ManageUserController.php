@@ -54,7 +54,8 @@ class ManageUserController extends Controller
             'role' => 'required',
             'profile' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ]);
-
+        $password = $request->input('password');
+        $hashedPassword = bcrypt($password);
         // mengambil file gambar
         $gambar = $request->file('profile');
 
@@ -72,7 +73,7 @@ class ManageUserController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => $hashedPassword,
             'role' => $request->role,
             'gambar' => $filename,
         ]);

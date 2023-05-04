@@ -24,7 +24,7 @@
         <tbody>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="px-6 py-4">
-                    Nama User
+                {{Auth::user()->name}}
                 </td>
                 <td class="px-6 py-4">
                     React Developer
@@ -44,38 +44,6 @@
                 </td>
                 <td class="px-6 py-4">
                     Designer
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
-                </td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="px-6 py-4">
-                    Nama User
-                </td>
-                <td class="px-6 py-4">
-                    Vue JS Developer
-                </td>
-                <td class="px-6 py-4">
-                    <div class="flex items-center">
-                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
-                </td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td class="px-6 py-4">
-                    Nama User
-                </td>
-                <td class="px-6 py-4">
-                    UI/UX Engineer
                 </td>
                 <td class="px-6 py-4">
                     <div class="flex items-center">

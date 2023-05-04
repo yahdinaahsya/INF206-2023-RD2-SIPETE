@@ -38,7 +38,7 @@ class JualController extends Controller
             'pakaian' => $request->pakaian,
             'cr_kirim' => $request->pengiriman,
         ]);
-        return redirect()->route('halamanjual')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect('/halamanjual')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**

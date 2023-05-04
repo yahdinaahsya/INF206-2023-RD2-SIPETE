@@ -19,7 +19,7 @@ class KelolaDonasiController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -28,10 +28,8 @@ class KelolaDonasiController extends Controller
      */
     public function store(Request $request)
     {
-        
-        TableDonasiModel::create([
-            ''
-        ]);
+
+
     }
 
     /**

@@ -52,22 +52,27 @@ class ManageUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'role' => 'required',
-            'profile' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'profile' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
         $password = $request->input('password');
         $hashedPassword = bcrypt($password);
-        // mengambil file gambar
-        $gambar = $request->file('profile');
 
-        // membuat folder baru jika belum ada
-        $path = storage_path('app/public/assets/profile');
-        if (!Storage::exists($path)) {
-            Storage::makeDirectory($path, 0777, true, true);
+        if ($request->hasFile('profile')) { // tambahkan kondisi untuk memeriksa apakah input gambar diisi atau tidak
+            $gambar = $request->file('profile');
+
+            // membuat folder baru jika belum ada
+            $path = storage_path('app/public/assets/profile');
+            if (!Storage::exists($path)) {
+                Storage::makeDirectory($path, 0777, true, true);
+            }
+
+            // menyimpan file gambar ke direktori "public/assets/profile"
+            $filename = $gambar->getClientOriginalName();
+            $gambar->storeAs('public/assets/profile', $filename);
+        } else {
+            $filename = null; // jika input gambar tidak diisi, set nilai filename menjadi null
         }
-
-        // menyimpan file gambar ke direktori "public/assets/profile"
-        $filename = $gambar->getClientOriginalName();
-        $gambar->storeAs('public/assets/profile', $filename);
 
         // menyimpan data user ke database
         User::create([
@@ -80,6 +85,7 @@ class ManageUserController extends Controller
 
         return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
     }
+
 
 
     public function cari(Request $request)

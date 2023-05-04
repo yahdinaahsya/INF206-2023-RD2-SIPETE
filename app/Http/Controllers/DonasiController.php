@@ -29,15 +29,15 @@ class DonasiController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreDonasiRequest $request)
-    {   
+    {
         Donasi::create([
             'id_user' => Auth::user()-> id,
             'nama' => $request->name,
-            'alamat' => $request -> alamat,
-            'tgldonasi' => $request -> tanggal,
+            'alamat' => $request->alamat,
+            'tgldonasi' => $request->tanggal,
             'email' => $request->email,
-            'no_hp' => $request -> telepon,
-            'cr_kirim' => $request -> pengiriman
+            'no_hp' => $request->telepon,
+            'cr_kirim' => $request->pengiriman
         ]);
 
         return redirect()->back();

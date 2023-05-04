@@ -31,7 +31,7 @@ class DonasiController extends Controller
     public function store(StoreDonasiRequest $request)
     {
         Donasi::create([
-            'id_user' => Auth::user()-> id,
+            'id_user' => Auth::user()->id,
             'nama' => $request->name,
             'alamat' => $request->alamat,
             'tgldonasi' => $request->tanggal,

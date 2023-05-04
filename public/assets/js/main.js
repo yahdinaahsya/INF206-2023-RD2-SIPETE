@@ -113,7 +113,7 @@ function getCount() {
     .then(response => response.json())
     .then(data => {
       // Menampilkan jumlah data pada elemen HTML dengan kelas "numbers"
-      document.querySelector('.numbers').textContent = data.count;
+      document.querySelector('#user-count').textContent = data.count;
     })
     .catch(error => console.error(error));
 }
@@ -121,6 +121,36 @@ function getCount() {
 // Panggil fungsi getCount() saat halaman dimuat
 document.addEventListener('DOMContentLoaded', getCount);
 
+
+//fungsi untuk menghitung jumlah penjualan di dashboard admin
+function getCountPenjualan() {
+  // Kirim permintaan AJAX ke URL yang mengembalikan jumlah data
+  fetch('/countPenjualan')
+    .then(response => response.json())
+    .then(data => {
+      // Menampilkan jumlah data pada elemen HTML dengan kelas "numbers"
+      document.querySelector('#jual-count').textContent = data.count;
+    })
+    .catch(error => console.error(error));
+}
+
+// Panggil fungsi getCountPenjualan() saat halaman dimuat
+document.addEventListener('DOMContentLoaded', getCountPenjualan);
+
+//fungsi untuk menghitung jumlah penjualan di dashboard admin
+function getCountDonasi() {
+  // Kirim permintaan AJAX ke URL yang mengembalikan jumlah data
+  fetch('/countPenjualan')
+    .then(response => response.json())
+    .then(data => {
+      // Menampilkan jumlah data pada elemen HTML dengan kelas "numbers"
+      document.querySelector('#donasi-count').textContent = data.count;
+    })
+    .catch(error => console.error(error));
+}
+
+// Panggil fungsi getCountDonasi saat halaman dimuat
+document.addEventListener('DOMContentLoaded', getCountDonasi);
 
 
 // ---------------------------------------------------

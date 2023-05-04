@@ -83,7 +83,7 @@ Route::middleware('auth')->group(function () {
         // menampilkan gambar profil
         Route::get('/manage-foto-profil', [FotoProfilAdminController::class, 'index'])->name('manage-foto-profil');
         Route::get('/kelola-donasi', [DonasiController::class, 'index'])->name('kelola-donasi');
-        Route::get('/manage-textil', [ManageTextileController::class, 'index'])->name('manage-textil');
+        Route::get('/manage-textil', [JualController::class, 'index'])->name('manage-textil');
         Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
         Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
@@ -99,12 +99,19 @@ Route::middleware('auth')->group(function () {
         Route::get('/manage-user/cari', [ManageUserController::class, 'cari'])->name('cari');
         Route::post('/simpan-textil', [ManageTextileController::class, 'store'])->name('simpan-textil');
         Route::get('/search', [SearchController::class, 'search'])->name('search');
-        // Route::post('/search', [SearchController::class, 'search'])->name('search.post');
+        Route::post('/search', [SearchController::class, 'search'])->name('search.post');
         Route::get('/count', function () {
             $count = DB::table('users')->count(); // Hitung jumlah data di dalam tabel
             return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
         });
-
+        Route::get('/countPenjualan', function () {
+            $count = DB::table('juals')->count(); // Hitung jumlah data di dalam tabel
+            return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
+        });
+        Route::get('/countDonasi', function () {
+            $count = DB::table('donasis')->count(); // Hitung jumlah data di dalam tabel
+            return response()->json(['count' => $count]); // Mengembalikan respons dalam bentuk JSON
+        });
         // menampilkan statistik geograpy indonesia
         Route::get('/statistika-geograpy', [StatistikaGeograpiIndonesiaController::class, 'index'])->name('statistika-geograpy');
     });

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ManageUserController;
+
 class CheckRole
 {
     /**
@@ -14,12 +16,12 @@ class CheckRole
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
- 
+
     public function handle(Request $request, Closure $next, ...$roles): Response
     {
         $user = Auth::user();
 
-        if (! $user) {
+        if (!$user) {
             return redirect('/login');
         }
 
@@ -28,7 +30,7 @@ class CheckRole
                 if ($role == 'admin') {
                     return $next($request);
                 } else {
-                    return redirect()->action([UserController::class, 'index']);
+                    return redirect()->action([ManageUserController::class, 'index']);
                 }
             }
         }

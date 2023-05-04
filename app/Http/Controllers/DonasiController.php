@@ -35,7 +35,6 @@ class DonasiController extends Controller
             'tgldonasi' => $request -> tanggal,
             'email' => $request->email,
             'no_hp' => $request -> telepon,
-            'pakaian' => $request -> pakaian,
             'cr_kirim' => $request -> pengiriman
         ]);
 

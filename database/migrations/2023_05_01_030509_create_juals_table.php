@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('alamat',100);
             $table->date('tgldonasi');
             $table->string('email')->unique();
-            $table->integer('no_hp');
+            $table->string('no_hp');
             $table->string('pakaian');
             $table->string('cr_kirim');
             $table->timestamps();

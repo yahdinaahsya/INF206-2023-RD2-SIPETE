@@ -15,7 +15,7 @@
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="numbers">0</div>
+                <div class="numbers" id="user-count">0</div>
                 <div class="cardName">Jumlah Users</div>
             </div>
 
@@ -26,7 +26,7 @@
 
         <div class="card">
             <div>
-                <div class="numbers">0</div>
+                <div class="numbers" id="jual-count">0</div>
                 <div class="cardName">Jumlah Penjualan</div>
             </div>
 
@@ -37,7 +37,7 @@
 
         <div class="card">
             <div>
-                <div class="numbers">0</div>
+                <div class="numbers" id="donasi-count">0</div>
                 <div class="cardName">Jumlah Donasi</div>
             </div>
 

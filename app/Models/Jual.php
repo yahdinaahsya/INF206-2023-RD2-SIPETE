@@ -12,9 +12,10 @@ class jual extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'id',
+        'id_user',
         'nama',
         'alamat',
-        'tgldonasi',
+        'tgljual',
         'email',
         'no_hp',
         'pakaian',

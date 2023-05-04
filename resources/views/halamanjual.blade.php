@@ -3,8 +3,9 @@
 @section('content')
     <div class="my-20 w-full">
 
-        <h1 class="text-5xl text-black text-center font-extrabold font-poppins "><br>Prosedure Jual Sipete</h1>
+        <h1 class="text-5xl text-black text-center font-extrabold font-poppins "><br>Prosedure jual Sipete</h1>
         <p class="text-3xl text-black text-left m-5 ml-20 font-extrabold font-poppins "><br>1. Mengisi form data diri
+
             <a href="#">
                 <!-- Modal toggle -->
                 <div class="flex justify-center">

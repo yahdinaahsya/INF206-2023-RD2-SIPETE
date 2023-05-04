@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\TableUserModel;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Str;
+use Intervention\Image\Facades\Image;
 use App\Models\User;
 
 class ManageUserController extends Controller
@@ -47,17 +48,19 @@ class ManageUserController extends Controller
      */
     public function store(Request $request)
     {
-        // validasi input
+
+        //validasi input
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
+            'password' => 'required',
             'role' => 'required',
             'profile' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
         $password = $request->input('password');
         $hashedPassword = bcrypt($password);
-
+        // mengambil file gambar
+        $gambar = $request->file('profile');
         if ($request->hasFile('profile')) { // tambahkan kondisi untuk memeriksa apakah input gambar diisi atau tidak
             $gambar = $request->file('profile');
 
@@ -73,17 +76,48 @@ class ManageUserController extends Controller
         } else {
             $filename = null; // jika input gambar tidak diisi, set nilai filename menjadi null
         }
+        if ($gambar) {
+            // jika ada input gambar, maka gunakan gambar tersebut
+            // menyimpan file gambar ke direktori "public/assets/profile"
+            $filename = $gambar->getClientOriginalName();
+            $gambar->storeAs('public/assets/profile', $filename);
 
-        // menyimpan data user ke database
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $hashedPassword,
-            'role' => $request->role,
-            'gambar' => $filename,
-        ]);
+            // menyimpan data user ke database
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $hashedPassword,
+                'role' => $request->role,
+                'gambar' => $filename,
+            ]);
+        } else {
+            // jika tidak ada input gambar, maka buat gambar profil dari inisial nama
+            $words = explode(' ', $request->name);
+            $initials = '';
+            foreach ($words as $word) {
+                $initials .= strtoupper(substr($word, 0, 1));
+            }
 
-        // return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
+            $image = imagecreatetruecolor(100, 100);
+            $background = imagecolorallocate($image, 255, 255, 255);
+            imagefill($image, 0, 0, $background);
+            $textColor = imagecolorallocate($image, 0, 0, 0);
+            $fontPath = public_path('font/arial.ttf'); // path ke file font
+            imagettftext($image, 48, 0, 50, 50, $textColor, $fontPath, $initials);
+            $path = 'app/public/assets/profile/' . $request->user()->id . '/avatar.png';
+            Storage::put($path, (string) imagepng($image));
+
+            // menyimpan data user ke database
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $hashedPassword,
+                'role' => $request->role,
+                'gambar' => 'avatar.png',
+            ]);
+        }
+
+        return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
     }
 
 
@@ -206,4 +240,44 @@ class ManageUserController extends Controller
     {
         //
     }
+
+    function generateProfileImage($name, $size = 200, $background = null, $textColor = null)
+    {
+        // Set default background and text color
+        $background = $background ?: '#CCCCCC';
+        $textColor = $textColor ?: '#FFFFFF';
+
+        // Create a new image
+        $img = imagecreatetruecolor($size, $size);
+
+        // Set the background color
+        list($r, $g, $b) = sscanf($background, "#%02x%02x%02x");
+        $bgColor = imagecolorallocate($img, $r, $g, $b);
+        imagefill($img, 0, 0, $bgColor);
+
+        // Set the text color
+        list($r, $g, $b) = sscanf($textColor, "#%02x%02x%02x");
+        $textColor = imagecolorallocate($img, $r, $g, $b);
+
+        // Get the first and last initial of the name
+        $initials = preg_replace('/[^a-zA-Z0-9]/', '', ucwords($name));
+        $initials = substr($initials, 0, 2);
+
+        // Calculate the font size and position for the text
+        $fontSize = $size * 0.5;
+        $bbox = imagettfbbox($fontSize, 0, 'arial.ttf', $initials);
+        $textWidth = $bbox[2] - $bbox[0];
+        $textHeight = $bbox[3] - $bbox[5];
+        $textX = ($size - $textWidth) / 2;
+        $textY = ($size - $textHeight) / 2 + $textHeight;
+
+        // Add the text to the image
+        imagettftext($img, $fontSize, 0, $textX, $textY, $textColor, 'arial.ttf', $initials);
+
+        // Output the image
+        header('Content-Type: image/png');
+        imagepng($img);
+        imagedestroy($img);
+    }
+
 }

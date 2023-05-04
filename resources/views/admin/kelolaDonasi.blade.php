@@ -153,6 +153,9 @@
                                 {{ $item->cr_kirim }}
                             </td>
                             <td class="px-6 py-4">
+                                {{ $item->status }}
+                            </td>
+                            <td class="px-6 py-4">
                                 <a href="#"
                                     class="font-medium text-green-600 dark:text-blue-500 hover:underline">Terima</a>
                                 <a href="#"

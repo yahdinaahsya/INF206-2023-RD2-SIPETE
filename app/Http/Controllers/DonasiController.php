@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Donasi;
 use App\Http\Requests\StoredonasiRequest;
 use App\Http\Requests\UpdatedonasiRequest;
+use Illuminate\Support\Facades\Auth;
 
 class DonasiController extends Controller
 {
@@ -30,6 +31,7 @@ class DonasiController extends Controller
     public function store(StoreDonasiRequest $request)
     {   
         Donasi::create([
+            'id_user' => Auth::user()-> id,
             'nama' => $request->name,
             'alamat' => $request -> alamat,
             'tgldonasi' => $request -> tanggal,

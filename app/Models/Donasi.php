@@ -10,6 +10,7 @@ class Donasi extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id_user',
         'nama',
         'alamat',
         'tgldonasi',

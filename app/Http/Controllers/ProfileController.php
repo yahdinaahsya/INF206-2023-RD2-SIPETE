@@ -8,9 +8,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\DB;
+
 
 class ProfileController extends Controller
 {
+    public function showCountDonation(){
+        $data = DB::table('donasis')->where('id_user', Auth::user()->id )->get();
+        $count_data = count ($data);
+        return view('profil',['count_donasi' => $count_data]);
+    }
+
     /**
      * Display the user's profile form.
      */

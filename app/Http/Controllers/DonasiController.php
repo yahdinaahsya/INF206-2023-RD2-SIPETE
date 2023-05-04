@@ -65,10 +65,10 @@ class DonasiController extends Controller
      * Update the specified resource in storage.
      */
 
-    public function updateStatus(Request $request, $id)
-    {
+    // public function updateStatus(Request $request, $id)
+    // {
 
-    }
+    // }
     public function update(UpdateDonasiRequest $request, Donasi $Donasi)
     {
         //

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\jual;
+use App\Models\Jual;
 use App\Http\Requests\StorejualRequest;
 use App\Http\Requests\UpdatejualRequest;
+use Illuminate\Support\Facades\Auth;
 
 class JualController extends Controller
 {
@@ -14,6 +15,8 @@ class JualController extends Controller
     public function index()
     {
         //
+        $datajual = Jual::all();
+        return view('admin.manageTextil', compact('datajual'));
     }
 
     /**
@@ -30,9 +33,10 @@ class JualController extends Controller
     public function store(StorejualRequest $request)
     {
         jual::create([
+            'id_user' => Auth::user()->id,
             'nama' => $request->name,
             'alamat' => $request->alamat,
-            'tgldonasi' => $request->tanggal,
+            'tgljual' => $request->tanggal,
             'email' => $request->email,
             'no_hp' => $request->telepon,
             'pakaian' => $request->pakaian,

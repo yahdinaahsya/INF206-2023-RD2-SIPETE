@@ -8,7 +8,7 @@
 
 <section style="font-family: Montserrat" class=" bg-white flex font-medium items-center justify-center h-screen">
 
-    <section class="w-64 mx-auto bg-[#E7ECFF] rounded-2xl px-8 py-6 shadow-lg">
+    <section class="w-64 mx-auto bg-[#E7ECFF] rounded-2xl px-8 py-6 shadow-2xl">
         <div class="flex items-center justify-between">
             <span class="text-gray-400 text-sm">Profil</span>
 
@@ -20,13 +20,13 @@
             </button>
 
             <!-- DropdownProfil menu -->
-            <div id="dropdownProfil" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div id="dropdownProfil" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-700">
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
                     <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Poin Saya</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Donasi Saya</a>
+                        <a href="/historyDonasi" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Donasi Saya</a>
                     </li>
                     <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Penjualan Saya</a>

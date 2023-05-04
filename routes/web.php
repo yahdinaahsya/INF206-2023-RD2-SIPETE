@@ -54,6 +54,10 @@ Route::get('/halamantentang', function () {
     return view('halamantentang');
 });
 
+Route::get('/historyDonasi', function () {
+    return view('historyDonasi');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

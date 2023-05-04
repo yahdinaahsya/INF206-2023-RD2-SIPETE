@@ -83,7 +83,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/manage-user', [ManageUserController::class, 'index'])->name('manage-user');
         // menampilkan gambar profil
         Route::get('/manage-foto-profil', [FotoProfilAdminController::class, 'index'])->name('manage-foto-profil');
-        Route::get('/kelola-donasi', [KelolaDonasiController::class, 'index'])->name('kelola-donasi');
+        Route::get('/kelola-donasi', [DonasiController::class, 'index'])->name('kelola-donasi');
         Route::get('/manage-textil', [ManageTextileController::class, 'index'])->name('manage-textil');
         Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');

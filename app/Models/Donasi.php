@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Donasi extends Model
 {
     use HasFactory;
-
+    protected $table = 'donasis';
+    protected $primarykey = 'id';
     protected $fillable = [
         'id_user',
         'nama',
@@ -19,4 +20,8 @@ class Donasi extends Model
         'pakaian',
         'cr_kirim',
     ];
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'id', 'id_user');
+    }
 }

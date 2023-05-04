@@ -15,6 +15,7 @@ use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\JualController;
+use App\Http\Controllers\DonasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +32,7 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
-Route::get('/profil', function () {
-    return view('profil');
-});
+Route::get('/profil', [ProfileController::class, 'showCountDonation']);
 
 Route::get('/redeemkoin', function () {
     return view('redeemkoin');

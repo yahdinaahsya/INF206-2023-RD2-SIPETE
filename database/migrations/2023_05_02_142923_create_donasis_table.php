@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('donasis', function (Blueprint $table) {
             $table->id();
+            $table->string('id_user')->nullable();
             $table->string('nama',100);
             $table->string('alamat',100);
             $table->date('tgldonasi');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('no_hp');
             $table->string('cr_kirim');
+            $table->string('status')->default('waiting');
             $table->timestamps();
         });
     }

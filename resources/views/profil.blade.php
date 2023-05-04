@@ -33,7 +33,9 @@
         </div>
         <div class="mt-3 text-white text-sm">
             <span class="text-gray-400 font-semibold">Donasi :</span>
-            <span class="text-gray-600">100</span>
+            <span class="text-gray-600">
+                {{$count_donasi}}
+            </span>
             <p class="text-[#118EEA] font-semibold mt-2.5" >
             Jual :
             </p>

@@ -48,19 +48,17 @@ class ManageUserController extends Controller
      */
     public function store(Request $request)
     {
-
-        //validasi input
+        // validasi input
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required',
             'role' => 'required',
             'profile' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
         $password = $request->input('password');
         $hashedPassword = bcrypt($password);
-        // mengambil file gambar
-        $gambar = $request->file('profile');
+
         if ($request->hasFile('profile')) { // tambahkan kondisi untuk memeriksa apakah input gambar diisi atau tidak
             $gambar = $request->file('profile');
 
@@ -76,49 +74,19 @@ class ManageUserController extends Controller
         } else {
             $filename = null; // jika input gambar tidak diisi, set nilai filename menjadi null
         }
-        if ($gambar) {
-            // jika ada input gambar, maka gunakan gambar tersebut
-            // menyimpan file gambar ke direktori "public/assets/profile"
-            $filename = $gambar->getClientOriginalName();
-            $gambar->storeAs('public/assets/profile', $filename);
 
-            // menyimpan data user ke database
-            User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => $hashedPassword,
-                'role' => $request->role,
-                'gambar' => $filename,
-            ]);
-        } else {
-            // jika tidak ada input gambar, maka buat gambar profil dari inisial nama
-            $words = explode(' ', $request->name);
-            $initials = '';
-            foreach ($words as $word) {
-                $initials .= strtoupper(substr($word, 0, 1));
-            }
-
-            $image = imagecreatetruecolor(100, 100);
-            $background = imagecolorallocate($image, 255, 255, 255);
-            imagefill($image, 0, 0, $background);
-            $textColor = imagecolorallocate($image, 0, 0, 0);
-            $fontPath = public_path('font/arial.ttf'); // path ke file font
-            imagettftext($image, 48, 0, 50, 50, $textColor, $fontPath, $initials);
-            $path = 'app/public/assets/profile/' . $request->user()->id . '/avatar.png';
-            Storage::put($path, (string) imagepng($image));
-
-            // menyimpan data user ke database
-            User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => $hashedPassword,
-                'role' => $request->role,
-                'gambar' => 'avatar.png',
-            ]);
-        }
+        // menyimpan data user ke database
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $hashedPassword,
+            'role' => $request->role,
+            'gambar' => $filename,
+        ]);
 
         return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
     }
+
 
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="pl-14 pt-40">
+    <div class="pl-14 pt-40">
         <div>
             <h1 class="pt-20 mb-5 font-[arial] text-6xl font-extrabold  text-[#0B63F8]  ">Dibuka 24 Jam</h1>
         </div>
@@ -43,6 +43,6 @@
                 </div>
             </div>
             <div class="mt-96 pt-32">
+            </div>
         </div>
-    </div>
-@endsection
+    @endsection

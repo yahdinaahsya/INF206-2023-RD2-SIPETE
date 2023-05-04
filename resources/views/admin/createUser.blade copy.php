@@ -7,8 +7,9 @@ create user
 @section('content')
 <h3 class="tambahAdmin">TAMBAH ADMIN</h3>
 <div class="card-body">
-    <form action="{{ route('simpan-user') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('simpan-user') }}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
+        @csrf
         <div class="form-group">
             <label for="nama">Nama</label>
             <input type="text" id="nama" name="nama" class="form-control" placeholder="nama user">

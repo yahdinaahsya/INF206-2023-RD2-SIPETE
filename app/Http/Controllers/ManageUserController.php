@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\TableUserModel;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Str;
+use Intervention\Image\Facades\Image;
 use App\Models\User;
 
 class ManageUserController extends Controller
@@ -52,22 +53,27 @@ class ManageUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'role' => 'required',
-            'profile' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+            'profile' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
         $password = $request->input('password');
         $hashedPassword = bcrypt($password);
-        // mengambil file gambar
-        $gambar = $request->file('profile');
 
-        // membuat folder baru jika belum ada
-        $path = storage_path('app/public/assets/profile');
-        if (!Storage::exists($path)) {
-            Storage::makeDirectory($path, 0777, true, true);
+        if ($request->hasFile('profile')) { // tambahkan kondisi untuk memeriksa apakah input gambar diisi atau tidak
+            $gambar = $request->file('profile');
+
+            // membuat folder baru jika belum ada
+            $path = storage_path('app/public/assets/profile');
+            if (!Storage::exists($path)) {
+                Storage::makeDirectory($path, 0777, true, true);
+            }
+
+            // menyimpan file gambar ke direktori "public/assets/profile"
+            $filename = $gambar->getClientOriginalName();
+            $gambar->storeAs('public/assets/profile', $filename);
+        } else {
+            $filename = null; // jika input gambar tidak diisi, set nilai filename menjadi null
         }
-
-        // menyimpan file gambar ke direktori "public/assets/profile"
-        $filename = $gambar->getClientOriginalName();
-        $gambar->storeAs('public/assets/profile', $filename);
 
         // menyimpan data user ke database
         User::create([
@@ -80,6 +86,8 @@ class ManageUserController extends Controller
 
         return redirect('manage-user')->with('success', 'User berhasil ditambahkan!');
     }
+
+
 
 
     public function cari(Request $request)
@@ -200,4 +208,44 @@ class ManageUserController extends Controller
     {
         //
     }
+
+    function generateProfileImage($name, $size = 200, $background = null, $textColor = null)
+    {
+        // Set default background and text color
+        $background = $background ?: '#CCCCCC';
+        $textColor = $textColor ?: '#FFFFFF';
+
+        // Create a new image
+        $img = imagecreatetruecolor($size, $size);
+
+        // Set the background color
+        list($r, $g, $b) = sscanf($background, "#%02x%02x%02x");
+        $bgColor = imagecolorallocate($img, $r, $g, $b);
+        imagefill($img, 0, 0, $bgColor);
+
+        // Set the text color
+        list($r, $g, $b) = sscanf($textColor, "#%02x%02x%02x");
+        $textColor = imagecolorallocate($img, $r, $g, $b);
+
+        // Get the first and last initial of the name
+        $initials = preg_replace('/[^a-zA-Z0-9]/', '', ucwords($name));
+        $initials = substr($initials, 0, 2);
+
+        // Calculate the font size and position for the text
+        $fontSize = $size * 0.5;
+        $bbox = imagettfbbox($fontSize, 0, 'arial.ttf', $initials);
+        $textWidth = $bbox[2] - $bbox[0];
+        $textHeight = $bbox[3] - $bbox[5];
+        $textX = ($size - $textWidth) / 2;
+        $textY = ($size - $textHeight) / 2 + $textHeight;
+
+        // Add the text to the image
+        imagettftext($img, $fontSize, 0, $textX, $textY, $textColor, 'arial.ttf', $initials);
+
+        // Output the image
+        header('Content-Type: image/png');
+        imagepng($img);
+        imagedestroy($img);
+    }
+
 }

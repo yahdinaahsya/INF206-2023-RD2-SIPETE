@@ -15,20 +15,20 @@
         </div>
         <div class="ml-20 ">
             <form action="/simpan-Kritik" method="post">
-                
+                @csrf
                 <label for="nama" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                     <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
                         Nama Anda
                     </p>
                 </label>
-                <input type="text" class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" name ="nama" id="nama" placeholder="Nama anda">
+                <input type="text" class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" name ="nama" id="nama" placeholder="Tuliskan nama anda">
 
-                <label for="nama" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                <label for="email" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                     <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
                         Email Anda
                     </p>
                 </label>
-                <input type="text" class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" name ="email" id="email" placeholder="Email anda">
+                <input type="text" class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" name ="email" id="email" placeholder="Tuliskan Email anda">
                 
                 <label for="pesan" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                     <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
@@ -37,14 +37,14 @@
                 </label>
                 <textarea class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" placeholder="Tuliskan kritik dan saran anda" name="pesan" id="pesan" style="height: 150px"></textarea>
                 
-                <a href="/">
-                    <br><br>
-                    <button
-                    type="button"
-                    class="inline-block rounded-full bg-[#118EEA] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                        Kirim
-                    </button>  
-                </a>
+                <div
+                    class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                        <button type="submit"
+                            class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="button">
+                            Kirim
+                        </button>
+                </div>
             </form>
             
         </div>

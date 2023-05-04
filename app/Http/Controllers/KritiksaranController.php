@@ -30,7 +30,7 @@ class KritiksaranController extends Controller
     public function store(StoreKritiksaranRequest $request)
     {
         Kritiksaran::create([
-            'nama' => $request->name,
+            'nama' => $request->nama,
             'email' => $request->email,
             'pesan' => $request->pesan,
         ]);

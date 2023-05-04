@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\JualController;
 use App\Http\Controllers\DonasiController;
+use App\Http\Controllers\HistoryDonasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +55,7 @@ Route::get('/halamantentang', function () {
     return view('halamantentang');
 });
 
-Route::get('/historyDonasi', function () {
-    return view('historyDonasi');
-});
+Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

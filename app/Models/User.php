@@ -48,6 +48,10 @@ class User extends Authenticatable
         'role',
     ];
 
+    public function donasi()
+    {
+        return $this->hasMany('App\Models\Donasi', 'id', 'id');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

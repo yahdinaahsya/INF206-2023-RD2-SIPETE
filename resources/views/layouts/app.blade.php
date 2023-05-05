@@ -14,6 +14,45 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        svg {
+            width: 100%;
+            height: auto;
+            margin-left: 10rem;
+            padding: 0;
+        }
+
+        .legend {
+            font-size: 12px;
+        }
+
+        .legend rect {
+            width: 30px;
+            height: 10px;
+            margin-right: 5px;
+            opacity: 0.8;
+        }
+
+        .h1ini {
+            font-family: Playfair Display, Georgia, Times New Roman, "Liberation Serif", serif;
+            font-weight: 400;
+            color: #555;
+            margin: 0;
+            font-size: 22.4px;
+            line-height: 1;
+            overflow-y: visible;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+    <link href="/dist/output.css" rel="stylesheet">
+
 </head>
 
 <body>

@@ -74,7 +74,7 @@
                                 <div class="flex pl-5 space-x-10  ">
                                     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                         <a href="#">
-                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                            <img class="p-8 rounded-t-lg" src="/images/keset.jpg"/>
                                         </a>
                                         <div class="px-5 pb-5">
                                             <a href="#">
@@ -89,7 +89,7 @@
                                     
                                     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                         <a href="#">
-                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                            <img class="p-8 rounded-t-lg pl-20" src="/images/boneka.jpeg"/>
                                         </a>
                                         <div class="px-5 pb-5">
                                             <a href="#">
@@ -106,7 +106,7 @@
                                 <div class="flex pl-5 space-x-10  ">
                                     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                         <a href="#">
-                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                            <img class="p-8 rounded-t-lg" src="/images/selimut.jpg"/>
                                         </a>
                                         <div class="px-5 pb-5">
                                             <a href="#">
@@ -121,7 +121,7 @@
                                     
                                     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                         <a href="#">
-                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                            <img class="p-8 rounded-t-lg" src="/images/sarungbantal.jpg"/>
                                         </a>
                                         <div class="px-5 pb-5">
                                             <a href="#">

@@ -55,7 +55,7 @@ Route::get('/halamandonasi', function () {
 });
 
 Route::get('/kritiksaran', function () {
-    return view('KritikSaran');
+    return view('kritikSaran');
 });
 
 Route::get('/halamantentang', function () {

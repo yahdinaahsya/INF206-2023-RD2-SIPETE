@@ -16,7 +16,7 @@
                 <span><span>Angka Penyebaran
                         Limbah Tektil di Indonesia 2022</span><br></span>
             </h1>
-            <p style="font-size: 12.8px; line-height: 1.2; overflow-y: hidden;"><span class="markdown-text-wrap"
+            <p id="pMap" style="font-size: 12.8px; line-height: 1.2; overflow-y: hidden;"><span class="markdown-text-wrap"
                     style="font-size: 12.8px; line-height: 1.2;"><span class="markdown-text-wrap__line"><span>Penyebaaran
                             Limbah
                             Tekstil di Indonesia.</span></span></span></p>

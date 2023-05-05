@@ -21,7 +21,6 @@ use App\Models\OlahData;
 use App\Http\Controllers\HistoryDonasiController;
 use App\Http\Controllers\KritiksaranController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

@@ -18,7 +18,7 @@
         svg {
             width: 100%;
             height: auto;
-            margin-left: 10rem;
+            margin-left: 13rem;
             padding: 0;
         }
 

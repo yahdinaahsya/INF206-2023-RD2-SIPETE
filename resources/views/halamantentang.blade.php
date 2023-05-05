@@ -22,10 +22,10 @@
                             Tekstil di Indonesia.</span></span></span></p>
 
             <svg id="map"></svg>
-            <div id="legend-container"></div>
+
 
         </ul>
-
+        <div id="legend-container"></div>
         {{-- <script src="https://d3js.org/d3.v7.min.js"></script> --}}
         <script src="{{ asset('dataStat/js/d3.v7.min.js') }}"></script>
         <script>

@@ -18,6 +18,9 @@ use App\Http\Controllers\JualController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\OlahDataStatistikController;
 use App\Models\OlahData;
+use App\Http\Controllers\HistoryDonasiController;
+use App\Http\Controllers\KritiksaranController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,9 +55,15 @@ Route::get('/halamandonasi', function () {
     return view('halamandonasi');
 });
 
+Route::get('/kritiksaran', function () {
+    return view('KritikSaran');
+});
+
 Route::get('/halamantentang', function () {
     return view('halamantentang');
 });
+
+Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -65,10 +74,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
-
     Route::post('/simpan-jual', [JualController::class, 'store'])->name('simpan-jual');
     Route::post('/simpan-Donasi', [DonasiController::class, 'store'])->name('simpan-Donasi');
+    Route::post('/simpan-Kritik', [KritiksaranController::class, 'store'])->name('simpan-Kritik');
 
     Route::middleware([CheckRole::class . ':user'])->group(function () {
 

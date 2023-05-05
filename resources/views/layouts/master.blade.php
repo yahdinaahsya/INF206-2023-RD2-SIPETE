@@ -73,14 +73,14 @@
                         <span class="title">Kelola Koin</span>
                     </a>
                 </li>
-                {{-- <li>
-                    <a href="#">
+                <li>
+                    <a href="{{ route('olah-data') }}">
                         <span class="icon">
                             <ion-icon name="card"></ion-icon>
                         </span>
-                        <span class="title">Pembayaran</span>
+                        <span class="title">Olah Data</span>
                     </a>
-                </li> --}}
+                </li>
                 {{-- <li>
                     <a href="#">
                         <span class="icon">

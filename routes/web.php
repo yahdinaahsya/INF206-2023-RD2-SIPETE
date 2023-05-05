@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\JualController;
 use App\Http\Controllers\DonasiController;
+use App\Http\Controllers\OlahDataStatistikController;
+use App\Models\OlahData;
 use App\Http\Controllers\HistoryDonasiController;
+use App\Http\Controllers\KritiksaranController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +55,10 @@ Route::get('/halamandonasi', function () {
     return view('halamandonasi');
 });
 
+Route::get('/kritiksaran', function () {
+    return view('KritikSaran');
+});
+
 Route::get('/halamantentang', function () {
     return view('halamantentang');
 });
@@ -66,10 +74,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
-
     Route::post('/simpan-jual', [JualController::class, 'store'])->name('simpan-jual');
     Route::post('/simpan-Donasi', [DonasiController::class, 'store'])->name('simpan-Donasi');
+    Route::post('/simpan-Kritik', [KritiksaranController::class, 'store'])->name('simpan-Kritik');
 
     Route::middleware([CheckRole::class . ':user'])->group(function () {
 
@@ -114,6 +121,14 @@ Route::middleware('auth')->group(function () {
         });
         // menampilkan statistik geograpy indonesia
         Route::get('/statistika-geograpy', [StatistikaGeograpiIndonesiaController::class, 'index'])->name('statistika-geograpy');
+        Route::get('/olah-data', [OlahDataStatistikController::class, 'index'])->name('olah-data');
+        Route::get('/olah-data/{id}/edit', [OlahDataStatistikController::class, 'edit'])->name('olah-data.edit');
+        Route::post('/olah-data/{id}/update', [OlahDataStatistikController::class, 'update'])->name('olah-data.update');
+        Route::get('/data', function () {
+            $data = DB::table('olahData')->get(); // Ambil data dari tabel data
+            return view('data', ['data' => $data]); // Kirim data ke dalam view data.blade.php
+        });
+        Route::resource('ratings', 'App\Http\Controllers\OlahDataStatistikController')->only(['index', 'update']);
     });
 });
 

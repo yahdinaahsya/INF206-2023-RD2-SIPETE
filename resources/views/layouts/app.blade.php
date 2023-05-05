@@ -15,10 +15,10 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        svg {
+        #map {
             width: 100%;
             height: auto;
-            margin-left: 10rem;
+            margin-left: 13rem;
             padding: 0;
         }
 
@@ -45,7 +45,7 @@
             text-align: center;
         }
 
-        p {
+        #pMap {
             color: #666;
             margin: 0;
             text-align: center;
@@ -157,12 +157,13 @@
                         <a href="/pengelolaan"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pengelolaan</a>
                     </li>
+
                     <li>
                         <a href="/halamantentang"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tentang</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="/kritiksaran"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kontak</a>
                     </li>
 

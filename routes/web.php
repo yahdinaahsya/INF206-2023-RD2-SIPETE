@@ -21,7 +21,6 @@ use App\Models\OlahData;
 use App\Http\Controllers\HistoryDonasiController;
 use App\Http\Controllers\KritiksaranController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,7 +55,7 @@ Route::get('/halamandonasi', function () {
 });
 
 Route::get('/kritiksaran', function () {
-    return view('KritikSaran');
+    return view('kritikSaran');
 });
 
 Route::get('/halamantentang', function () {

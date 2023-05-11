@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Donasi;
+use App\Models\TableKoinModel;
 use App\Http\Requests\StoreDonasiRequest;
 use App\Http\Requests\UpdatedonasiRequest;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,7 @@ class DonasiController extends Controller
      */
     public function store(StoreDonasiRequest $request)
     {
-        Donasi::create([
+        $donasi = Donasi::create([
             'id_user' => Auth::user()->id,
             'nama' => $request->name,
             'alamat' => $request->alamat,
@@ -41,9 +42,30 @@ class DonasiController extends Controller
             'cr_kirim' => $request->pengiriman
         ]);
 
-        return redirect()->back();
+        // Ambil data koin dari database
+        $koin = TableKoinModel::where('id_user', Auth::user()->id)->first();
 
+        // Periksa apakah data koin sudah ada di database
+        if (!$koin) {
+            // Jika belum, buat data koin baru untuk user ini
+            $koin = new TableKoinModel();
+            $koin->id_user = Auth::user()->id;
+            $koin->saldo_koin = 100;
+        } else {
+            // Jika sudah, tambahkan saldo koin
+            $koin->saldo_koin += 100;
+        }
+
+        // Simpan data koin ke dalam database
+        $koin->save();
+
+        // Simpan data koin ke dalam session
+        session()->put('datakoin', $koin);
+
+        return redirect()->back();
     }
+
+
 
     /**
      * Display the specified resource.

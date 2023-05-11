@@ -26,9 +26,9 @@
             <h2 class=" font-[arial] font-extrabold tracking-wide ">Kami ada 24 jam non-stop untuk melayani anda dalam
                 menangani sampah tekstil</h2>
         </div>
-        <div class="pt-16">
-            <iframe class="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700"
-                src="https://www.youtube.com/watch?v=NW3OFK-O3DM">
+        <div class="pt-16 p-16">
+            <iframe class="w-full h-96 max-w-full border border-gray-200 rounded-lg dark:border-gray-700"
+                src="https://www.youtube.com/embed/NW3OFK-O3DM">
             </iframe>
         </div>
     </div>

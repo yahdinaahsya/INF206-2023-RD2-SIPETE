@@ -69,14 +69,9 @@
                                         <div class="px-6 py-6 lg:px-8">
                                             <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                                                 Konfirmasi Pengiriman Limbah Tekstil Anda Disini</h3>
-                                            <form class="space-y-6" action="#">
-                                                <div class="mt-4">
-                                                    <label for="nomor_resi" class="block font-medium text-gray-700">Nomor
-                                                        Resi</label>
-                                                    <input type="text" name="nomor_resi" id="nomor_resi"
-                                                        placeholder="Masukkan Nomor Resi" required
-                                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                                                </div>
+                                            <form class="space-y-6" action="/historyDonasi/addKonfirmasi" method="POST">
+                                                @csrf
+                                                <input name="id_donasi" value="{{$item->id}}" hidden>
                                                 <div class="mt-4">
                                                     <label for="nama_pengirim" class="block font-medium text-gray-700">Nama
                                                         Pengirim</label>

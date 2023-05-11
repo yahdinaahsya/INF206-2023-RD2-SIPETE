@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('email');
             $table->string('no_hp');
             $table->string('cr_kirim');
-            $table->string('status')->default('waiting');
+            $table->string('status')->default('dalam antrian');
             $table->timestamps();
         });
     }

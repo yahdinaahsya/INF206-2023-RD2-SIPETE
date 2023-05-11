@@ -89,6 +89,14 @@
                         <span class="title">Kritik dan Saran</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('konfir-kirim') }}">
+                        <span class="icon">
+                            <ion-icon name="clipboard"></ion-icon>
+                        </span>
+                        <span class="title">Konfirmasi Barang</span>
+                    </a>
+                </li>
                 {{-- <li>
                     <a href="#">
                         <span class="icon">

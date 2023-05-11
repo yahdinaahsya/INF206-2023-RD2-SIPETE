@@ -62,6 +62,8 @@ Route::get('/halamantentang', function () {
     return view('halamantentang');
 });
 
+Route::get('/historyPoin', [HistoryDonasiController::class, 'showDataDonasi']);
+
 Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi']);
 
 Route::get('/dashboard', function () {

@@ -64,6 +64,8 @@ Route::get('/halamantentang', function () {
 });
 
 Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi']);
+Route::post('/historyDonasi/addKonfirmasi', [HistoryDonasiController::class, 'addKonfirmasi']);
+
 Route::get('/historyJual', [HistoryJualController::class, 'showDataJual']);
 
 Route::get('/dashboard', function () {

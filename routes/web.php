@@ -113,7 +113,10 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
         Route::get('/kritik-saran', [KritiksaranController::class, 'index'])->name('kritik-saran');
+
+        Route::get('/konfir-kirim/konfirmasi/{id}', [KonfirkirimController::class, 'konfirmasi']);
         Route::get('/konfir-kirim', [KonfirkirimController::class, 'index'])->name('konfir-kirim');
+
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
         Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
         // create data user

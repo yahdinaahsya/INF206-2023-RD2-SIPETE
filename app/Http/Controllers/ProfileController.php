@@ -15,8 +15,11 @@ class ProfileController extends Controller
 {
     public function showCountDonation(){
         $data = DB::table('donasis')->where('id_user', Auth::user()->id )->get();
-        $count_data = count ($data);
-        return view('profil',['count_donasi' => $count_data]);
+        $data_jual = DB::table('juals')->where('id_user', Auth::user()->id)->get();
+        $count_donasi = count ($data);
+        $count_jual = $data_jual->count();
+        // return view('profil',['count_donasi' => $count_data]);
+        return view('profil', compact('count_donasi', 'count_jual'));
     }
 
     /**

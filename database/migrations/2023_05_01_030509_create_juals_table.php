@@ -16,10 +16,10 @@ return new class extends Migration {
             $table->string('nama', 100);
             $table->string('alamat', 100);
             $table->date('tgljual');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('no_hp');
-            $table->string('pakaian');
             $table->string('cr_kirim');
+            $table->string('status')->default('dalam antrian');
             $table->timestamps();
         });
     }

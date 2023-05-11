@@ -26,38 +26,48 @@
             <h2 class=" font-[arial] font-extrabold tracking-wide ">Kami ada 24 jam non-stop untuk melayani anda dalam
                 menangani sampah tekstil</h2>
         </div>
-        <div class="pt-16">
-            <img class="h-screen max-w-full mx-auto" src="images/pengolahan.jpg">
+        <div class="pt-16 p-16">
+            <iframe class="w-full h-96 max-w-full border border-gray-200 rounded-lg dark:border-gray-700"
+                src="https://www.youtube.com/embed/NW3OFK-O3DM">
+            </iframe>
         </div>
     </div>
     <div>
         <div class="text-center pt-20">
-            <h1 class="font-[arial] font-extrabold text-4xl">Informasi</h1>
+            <h1 class="font-[arial] font-extrabold text-4xl">Artikel</h1>
         </div>
             <div class=" pt-16">
    
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
 
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div class="relative overflow-hidden rounded-lg md:h-96">
 
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/images/grid.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <a href="https://www.grid.id/parapuan/read/532891955/melihat-potensi-hadirnya-lapangan-kerja-baru-lewat-pengelolaan-sampah?page=all">
+                <img src="/images/grid.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="..." >
+                <h3 class="absolute text-2xl text-white font-bold top-5 left-5">Melihat Potensi Hadirnya Lapangan Kerja Baru Lewat Pengelolaan Sampah</h3>
+            </a>
+        </div>
+
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="https://money.kompas.com/read/2022/02/24/083300926/kurangi-limbah-tekstil-bappenas-ajak-industri-terapkan-konsep-fashion-sirkular?page=all">
+                <img src="/images/kompas.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
+                <h3 class="absolute text-2xl text-white font-bold top-5 left-5">Kurangi Limbah Tekstil, Bappenas Ajak Industri Terapkan Konsep Fashion Sirkular</h3>
+            </a>
             </div>
 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/images/kompas.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <a href="https://foto.kompas.com/photo/read/2020/2/17/1581948059356/2/Limbah-Industri-Busana-Ancaman-Serius-bagi-Lingkungan#&gid=1&pid=1">
+                <img src="/images/orang.png" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
+                <h3 class="absolute text-2xl text-white font-bold top-5 left-5">Limbah Industri Busana, Ancaman Serius bagi Lingkungan</h3>
+            </a>    
             </div>
 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/images/orang.png" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/images/kompasiana.jpg" class="absolute block  w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/images/gambarback.png" class="absolute block  w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <a href="https://www.kompasiana.com/ciciarfian26/5d6266a30d8230502975ba03/atasi-limbah-konveksi-di-kelurahan-purwosari-kkn-unnes-adakan-pelatihan-konversi-kain-perca">
+                <img src="/images/kompasiana.jpg" class="absolute block  w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
+                <h3 class="absolute text-2xl text-white font-bold top-5 left-5">Atasi Limbah Konveksi di Kelurahan Purwosari, KKN UNNES Adakan Pelatihan Konversi Kain Perca</h3>
+            </a>
             </div>
         </div>
 
@@ -81,10 +91,8 @@
                 <span class="sr-only">Next</span>
             </span>
         </button>
-    </div>  
-          
-            <div class="mt-96 pt-32">
-        </div>
+        </div>  
+    </div>
     </div>
 </div>
     

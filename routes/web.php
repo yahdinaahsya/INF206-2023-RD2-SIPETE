@@ -71,6 +71,7 @@ Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi'])
 Route::post('/historyDonasi/addKonfirmasi', [HistoryDonasiController::class, 'addKonfirmasi']);
 
 Route::get('/historyJual', [HistoryJualController::class, 'showDataJual']);
+Route::post('/historyJual/addKonfirmasi', [HistoryJualController::class, 'addKonfirmasi']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

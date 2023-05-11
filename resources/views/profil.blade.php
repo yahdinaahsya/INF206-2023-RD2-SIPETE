@@ -29,7 +29,7 @@
                         <a href="/historyDonasi" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Donasi Saya</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Penjualan Saya</a>
+                        <a href="/historyJual" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Penjualan Saya</a>
                     </li>
                 </ul>
             </div>
@@ -53,9 +53,7 @@
         </div>
         <div class="mt-6 text-white text-sm">
             <span class="text-[#6B7280] font-semibold">Donasi : {{$count_donasi}}</span>
-            <p class="text-[#118EEA] font-semibold mt-2.5" >
-                Jual :
-            </p>
+            <p class="text-[#118EEA] font-semibold mt-2.5" >Jual : {{$count_jual}} </p>
         </div>
     </section>
 </section>

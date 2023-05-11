@@ -19,7 +19,18 @@ return new class extends Migration {
             $table->string('email');
             $table->string('no_hp');
             $table->string('cr_kirim');
-            $table->string('status')->default('waiting');
+            $table->string('status')->default('dalam antrian');
+            $table->timestamps();
+        });
+
+        Schema::create('konfirmasi_pengiriman', function (Blueprint $table) {
+            $table->id();
+            $table->string('id_user')->nullable();
+            $table->string('id_donasi')->nullable();
+            $table->string('nama_pengirim', 100);
+            $table->date('tgl_pengiriman');
+            $table->string('resi_pengiriman');
+            $table->binary('foro_resi')->nullable();
             $table->timestamps();
         });
     }
@@ -30,5 +41,6 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::dropIfExists('donasis');
+        Schema::dropIfExists('konfirmasi_pengiriman');
     }
 };

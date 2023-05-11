@@ -156,10 +156,23 @@
                                 {{ $item->status }}
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#"
-                                    class="font-medium text-green-600 dark:text-blue-500 hover:underline">Terima</a>
-                                <a href="#"
-                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline">Tolak</a>
+                                @if ($item->status == 'dalam antrian')
+                                    <form action="{{ route('kelola-donasi.terima', $item->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit"
+                                            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Terima</button>
+                                    </form>
+                                @else
+                                    <span class="text-success">Selesai</span>
+                                @endif
+                                <form action="{{ route('kelola-donasi.destroy', $item->id) }}" method="POST"
+                                    class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                        onclick="return confirm('Apakah Anda yakin ingin menghapus transaksi ini?')">Hapus</button>
+                                </form>
 
                             </td>
                         </tr>

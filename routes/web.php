@@ -104,8 +104,6 @@ Route::middleware('auth')->group(function () {
         Route::delete('/kelola-donasi/{id}', [DonasiController::class, 'destroy'])->name('kelola-donasi.destroy');
 
 
-
-
         Route::get('/manage-textil', [JualController::class, 'index'])->name('manage-textil');
         Route::post('/manage-textil/{id}/terima', [JualController::class, 'terima'], )->name('manage-textil.terima');
         Route::delete('/manage-textil/{id}', [JualController::class, 'destroy'])->name('manage-textil.destroy');
@@ -118,6 +116,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/konfir-kirim', [KonfirkirimController::class, 'index'])->name('konfir-kirim');
 
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
+
         Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
         // create data user
         Route::post('/simpan-user', [ManageUserController::class, 'store'])->name('simpan-user');
@@ -129,6 +128,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/deleteDataUser/{id}', [ManageUserController::class, 'deleteDataUser'])->name('deleteDataUser');
         // cari user
         Route::get('/manage-user/cari', [ManageUserController::class, 'cari'])->name('cari');
+
+        Route::get('manage-textil/selesai/{id}',[JualController::class,'selesai']);
         Route::post('/simpan-textil', [ManageTextileController::class, 'store'])->name('simpan-textil');
         Route::get('/search', [SearchController::class, 'search'])->name('search');
         Route::post('/search', [SearchController::class, 'search'])->name('search.post');

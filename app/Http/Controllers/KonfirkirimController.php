@@ -15,8 +15,7 @@ class KonfirKirimController extends Controller
      */
     public function index()
     {
-        //
-        
+        //ambil data donasi dan konfirmasi_pengiriman
         $konfirmasi_pengiriman= DB::table('konfirmasi_pengiriman')->join('donasis', 'konfirmasi_pengiriman.id_donasi', '=','donasis.id')->get() ;
         // dd($konfirmasi_pengiriman);
         return view('admin.kelolaKonfir', compact(['konfirmasi_pengiriman']));

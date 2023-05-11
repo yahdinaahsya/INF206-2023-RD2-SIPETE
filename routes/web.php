@@ -19,7 +19,8 @@ use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\OlahDataStatistikController;
 use App\Models\OlahData;
 use App\Http\Controllers\HistoryDonasiController;
-use App\Http\Controllers\KritiksaranController;
+use App\Http\Controllers\KritiksaranController; 
+use App\Http\Controllers\HistoryJualController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,7 @@ Route::get('/halamantentang', function () {
 });
 
 Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi']);
+Route::get('/historyJual', [HistoryJualController::class, 'showDataJual']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

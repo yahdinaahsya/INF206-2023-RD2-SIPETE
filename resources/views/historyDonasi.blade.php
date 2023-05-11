@@ -35,11 +35,29 @@
                         <td class="px-6 py-4">
                             {{ $item->cr_kirim }}
                         </td>
+                        @if($item -> status == "dalam antrian")
                         <td class="px-6 py-4">
                             <div class="flex items-center">
-                                <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> {{ $item->status }}
+                                <div class="h-2.5 w-2.5 rounded-full bg-red-500 mr-2"></div> 
+                                {{ $item->status }}
                             </div>
                         </td>
+                        @elseif($item -> status == "menunggu konfirmasi pengiriman")
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="h-2.5 w-2.5 rounded-full bg-yellow-500 mr-2"></div> 
+                                {{ $item->status }}
+                            </div>
+                        </td>
+                        @else
+                        <td class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="h-2.5 w-2.5 rounded-full bg-blue-500 mr-2"></div> 
+                                {{ $item->status }}
+                            </div>
+                        </td>
+                        @endif
+
                         <td class="px-6 py-4">
                             @if ($item->status =='menunggu konfirmasi pengiriman')
                             <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"

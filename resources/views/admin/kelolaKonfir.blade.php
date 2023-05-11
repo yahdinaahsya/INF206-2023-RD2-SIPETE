@@ -54,6 +54,7 @@
                 </th>
             </tr>
             @foreach($konfirmasi_pengiriman as $kp)
+           
                 <tr>
                     <td class='text-center'>
                         {{$kp->id}}
@@ -71,21 +72,20 @@
                         {{$kp->tgl_pengiriman}}
                     </td>
                     <td>
-                        {{$kp->resi_pengirim}}
+                        {{$kp->resi_pengiriman}}
                     </td>
                     <td >
                         {{$kp->foro_resi}}
                     </td>
+                    @if($kp->status=="menunggu konfirmasi barang")
                     <td class="px-6 py-4">
                             <!-- Modal toggle -->
-                            <a href="#" data-modal-target="#"
-                                data-modal-show="#"
+                            <a href="/konfir-kirim/konfirmasi/{{ $kp-> id_donasi }}"
                                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Konfirmasi </a>
-                            <a href="#" data-modal-target="#"
-                                data-modal-show="#"
-                                class="font-medium text-red-600 dark:text-blue-500 hover:underline">Batalkan</a>
-
-                        </td>
+                            <a href="#"
+                                class="font-medium text-red-600 dark:text-blue-500 hover:underline">Batalkan</a>        
+                    </td>
+                    @endif
                 </tr>
             @endforeach
         </thead>

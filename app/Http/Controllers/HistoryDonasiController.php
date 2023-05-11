@@ -19,21 +19,21 @@ class HistoryDonasiController extends Controller
     public function addKonfirmasi(Request $request)
     {
         //dd($request);
-        if ($request->hasFile('gambar_resi_pengiriman')) { // tambahkan kondisi untuk memeriksa apakah input gambar diisi atau tidak
-            $gambar = $request->file('gambar_resi_pengiriman');
+        // if ($request->hasFile('gambar_resi_pengiriman')) { // tambahkan kondisi untuk memeriksa apakah input gambar diisi atau tidak
+        //     $gambar = $request->file('gambar_resi_pengiriman');
 
-            // membuat folder baru jika belum ada
-            $path = storage_path('app/public/assets/profile');
-            if (!Storage::exists($path)) {
-                Storage::makeDirectory($path, 0777, true, true);
-            }
+        //     // membuat folder baru jika belum ada
+        //     $path = storage_path('app/public/assets/profile');
+        //     if (!Storage::exists($path)) {
+        //         Storage::makeDirectory($path, 0777, true, true);
+        //     }
 
-            // menyimpan file gambar ke direktori "public/assets/profile"
-            $filename = $gambar->getClientOriginalName();
-            $gambar->storeAs('public/assets/profile', $filename);
-        } else {
-            $filename = null; // jika input gambar tidak diisi, set nilai filename menjadi null
-        }
+        //     // menyimpan file gambar ke direktori "public/assets/profile"
+        //     $filename = $gambar->getClientOriginalName();
+        //     $gambar->storeAs('public/assets/profile', $filename);
+        // } else {
+        //     $filename = null; // jika input gambar tidak diisi, set nilai filename menjadi null
+        // }
 
         DB::table('konfirmasi_pengiriman')->insert([
             'id_user' => Auth::user()->id,

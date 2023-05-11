@@ -81,6 +81,14 @@
                         <span class="title">Olah Data</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('kritik-saran') }}">
+                        <span class="icon">
+                            <ion-icon name="bag-check-outline"></ion-icon>
+                        </span>
+                        <span class="title">Kritik dan Saran</span>
+                    </a>
+                </li>
                 {{-- <li>
                     <a href="#">
                         <span class="icon">

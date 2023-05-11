@@ -91,6 +91,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/kelola-donasi', [DonasiController::class, 'index'])->name('kelola-donasi');
         Route::get('/manage-textil', [JualController::class, 'index'])->name('manage-textil');
         Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
+        Route::get('/kritik-saran', [KritiksaranController::class, 'index'])->name('kritik-saran');
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
         Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
         // create data user

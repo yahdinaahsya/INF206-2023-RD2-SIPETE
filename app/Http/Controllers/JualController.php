@@ -46,13 +46,22 @@ class JualController extends Controller
 
         return redirect('/halamanjual')->with('success', 'Data Berhasil Ditambahkan');
     }
+    //selesai
+    public function selesai($id){
+        $donasi = Jual::find($id);
+        if ($donasi->status == 'dalam proses') {
+            $donasi->status = 'selesai';
+            $donasi->save();
+        }
+        return redirect()->back()->with('success', 'Penjualan Telah Selesai');
+    }
 
     // terima
     public function terima($id)
     {
         $donasi = Jual::find($id);
         if ($donasi->status == 'dalam antrian') {
-            $donasi->status = 'selesai';
+            $donasi->status = 'dalam proses';
             $donasi->save();
 
             // Ambil data koin dari database

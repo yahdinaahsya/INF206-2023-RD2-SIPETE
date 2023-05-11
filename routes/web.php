@@ -24,6 +24,7 @@ use App\Http\Controllers\KoinController;
 use App\Http\Controllers\KritiksaranController;
 use App\Http\Controllers\PoinSipeteController;
 use App\Http\Controllers\HistoryJualController;
+use App\Http\Controllers\KonfirkirimController;
 
 
 /*
@@ -77,10 +78,13 @@ Route::get('/halamantentang', function () {
     return view('halamantentang');
 });
 
+Route::get('/historyPoin', [HistoryDonasiController::class, 'showDataDonasi']);
+
 Route::get('/historyDonasi', [HistoryDonasiController::class, 'showDataDonasi']);
 Route::post('/historyDonasi/addKonfirmasi', [HistoryDonasiController::class, 'addKonfirmasi']);
 
 Route::get('/historyJual', [HistoryJualController::class, 'showDataJual']);
+Route::post('/historyJual/addKonfirmasi', [HistoryJualController::class, 'addKonfirmasi']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -119,6 +123,10 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
         Route::get('/kritik-saran', [KritiksaranController::class, 'index'])->name('kritik-saran');
+
+        Route::get('/konfir-kirim/konfirmasi/{id}', [KonfirkirimController::class, 'konfirmasi']);
+        Route::get('/konfir-kirim', [KonfirkirimController::class, 'index'])->name('konfir-kirim');
+
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
         Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
         // create data user

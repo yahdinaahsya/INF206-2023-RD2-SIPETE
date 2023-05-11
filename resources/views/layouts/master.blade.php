@@ -90,11 +90,19 @@
                     </a>
                 </li>
                 <li>
+
                     <a href="{{ route('tambahBarang') }}">
                         <span class="icon">
                             <ion-icon name="bag-check-outline"></ion-icon>
                         </span>
                         <span class="title">Tambah Barang</span>
+
+                    <a href="{{ route('konfir-kirim') }}">
+                        <span class="icon">
+                            <ion-icon name="clipboard"></ion-icon>
+                        </span>
+                        <span class="title">Konfirmasi Barang</span>
+
                     </a>
                 </li>
                 {{-- <li>

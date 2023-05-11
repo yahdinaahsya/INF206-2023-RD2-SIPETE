@@ -14,6 +14,8 @@ class HistoryDonasiController extends Controller
         return view('historyDonasi',['data_donasi'=> $data]);
     }
     
+    
+
     public function addKonfirmasi(Request $request)
     {
         //dd($request);

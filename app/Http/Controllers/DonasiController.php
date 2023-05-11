@@ -45,11 +45,12 @@ class DonasiController extends Controller
 
         return redirect()->back();
     }
+
     public function terima($id)
     {
         $donasi = Donasi::find($id);
         if ($donasi->status == 'dalam antrian') {
-            $donasi->status = 'selesai';
+            $donasi->status = 'menunggu konfirmasi pengiriman';
             $donasi->save();
 
             // Ambil data koin dari database
@@ -77,6 +78,7 @@ class DonasiController extends Controller
         }
     }
 
+    
 
 
     /**

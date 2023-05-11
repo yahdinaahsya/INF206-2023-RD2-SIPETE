@@ -96,7 +96,17 @@ Route::middleware('auth')->group(function () {
         // menampilkan gambar profil
         Route::get('/manage-foto-profil', [FotoProfilAdminController::class, 'index'])->name('manage-foto-profil');
         Route::get('/kelola-donasi', [DonasiController::class, 'index'])->name('kelola-donasi');
+        Route::post('/kelola-donasi/{id}/terima', [DonasiController::class, 'terima'], )->name('kelola-donasi.terima');
+        Route::delete('/kelola-donasi/{id}', [DonasiController::class, 'destroy'])->name('kelola-donasi.destroy');
+
+
+
+
         Route::get('/manage-textil', [JualController::class, 'index'])->name('manage-textil');
+        Route::post('/manage-textil/{id}/terima', [JualController::class, 'terima'], )->name('manage-textil.terima');
+        Route::delete('/manage-textil/{id}', [JualController::class, 'destroy'])->name('manage-textil.destroy');
+
+
         Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
         Route::get('/kritik-saran', [KritiksaranController::class, 'index'])->name('kritik-saran');
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
@@ -144,6 +154,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/kelola-koin/{id}/edit', [KoinController::class, 'edit'])->name('coin-edit');
         // Mengupdate jumlah koin
         Route::put('/kelola-koin/{id}', [KoinController::class, 'update'])->name('coin-update');
+
+        // jka diterima donasi
+
     });
 });
 

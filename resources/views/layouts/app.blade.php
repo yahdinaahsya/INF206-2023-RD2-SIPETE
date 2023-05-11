@@ -14,6 +14,45 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        #map {
+            width: 100%;
+            height: auto;
+            margin-left: 13rem;
+            padding: 0;
+        }
+
+        .legend {
+            font-size: 12px;
+        }
+
+        .legend rect {
+            width: 30px;
+            height: 10px;
+            margin-right: 5px;
+            opacity: 0.8;
+        }
+
+        .h1ini {
+            font-family: Playfair Display, Georgia, Times New Roman, "Liberation Serif", serif;
+            font-weight: 400;
+            color: #555;
+            margin: 0;
+            font-size: 22.4px;
+            line-height: 1;
+            overflow-y: visible;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        #pMap {
+            color: #666;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+    <link href="/dist/output.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -118,12 +157,13 @@
                         <a href="/pengelolaan"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pengelolaan</a>
                     </li>
+
                     <li>
                         <a href="/halamantentang"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tentang</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="/kritiksaran"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kontak</a>
                     </li>
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Donasi;
-use App\Http\Requests\StoredonasiRequest;
+use App\Http\Requests\StoreDonasiRequest;
 use App\Http\Requests\UpdatedonasiRequest;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +14,8 @@ class DonasiController extends Controller
      */
     public function index()
     {
-        //
+        $datadonasi = Donasi::all();
+        return view('admin.kelolaDonasi', compact('datadonasi'));
     }
 
     /**
@@ -63,6 +64,11 @@ class DonasiController extends Controller
     /**
      * Update the specified resource in storage.
      */
+
+    // public function updateStatus(Request $request, $id)
+    // {
+
+    // }
     public function update(UpdateDonasiRequest $request, Donasi $Donasi)
     {
         //

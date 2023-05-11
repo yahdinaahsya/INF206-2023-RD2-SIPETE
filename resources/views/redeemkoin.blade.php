@@ -8,16 +8,6 @@
             <div>
                 <img class=" h-64 w-auto" src="/images/Ellipse 10.jpg">
             </div>
-            <div class="absolute">
-                <img class="relative pl-16 pt-7 " src="/images/tukarpulsa.jpg">
-            </div>
-            <div class="h-auto max-w-lg pt-3 pr-16 ml-auto">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </button>
-            </div>
         </div>
 
         <div class="text-center -mb-32 ">
@@ -28,23 +18,139 @@
 
             <div class="">
                 <!--tukar poin dan lambangnya-->
-                <h1 class="text-2xl font-extrabold text-slate-700">Tukar Poin Menjadi</h1>
-                <h1 class="font-extrabold text-1xl  text-slate-700">Pulsa<span class="font-extrabold pl-14">Token
-                        Listrik</span> </h1>
-                <div class="inline-flex pr-7  ">
-                    <img class="pr-24 -mr-10" src="/images/pulsa-removebg-preview 1.jpg">
-                    <img class="pl-4  " src="/images/tokenListrik-removebg-preview 1.jpg">
+                  <button data-modal-target="redeem" data-modal-toggle="redeem" class="relative overflow-hidden border-2 border-black text-black inline-block text-lg font-medium py-4 px-6 rounded-md cursor-pointer bg-white select-none transition-all duration-600 ease-in-out hover:bg-black hover:text-white">
+                    <span class="relative z-10 transition-colors duration-600 cubic-bezier(0.48, 0, 0.12, 1)">Tukar Poin</span>
+                  </button>
+                  <!--redeem modal-->
+                  <div id="redeem" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative w-full max-w-4xl max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-blue-500 rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 class=" text-5xl pl-72 text-justify font-medium text-white dark:text-white">
+                                    Tukar Poin
+                                </h3>
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="redeem">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body (bros kain, scrunchie, keset, boneka kain perca, selimut , sarung bantal) -->
+                            <div class=" p-6 space-y-6">
+                                <!-- bagian 1 -->
+                                <div class="flex pl-5 space-x-10  ">
+                                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <a href="#">
+                                            <img class="p-8 rounded-t-lg" src="/images/BrosKain.jpeg"/>
+                                        </a>
+                                        <div class="px-5 pb-5">
+                                            <a href="#">
+                                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Bros Kain</h5>
+                                            </a>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tukarkan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <a href="#">
+                                            <img class="p-8 rounded-t-lg" src="/images/scrunchie.jpg"/>
+                                        </a>
+                                        <div class="px-5 pb-5">
+                                            <a href="#">
+                                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Scrunchie</h5>
+                                            </a>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tukarkan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bagian 2 -->
+                                <div class="flex pl-5 space-x-10  ">
+                                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <a href="#">
+                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                        </a>
+                                        <div class="px-5 pb-5">
+                                            <a href="#">
+                                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Keset</h5>
+                                            </a>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tukarkan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <a href="#">
+                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                        </a>
+                                        <div class="px-5 pb-5">
+                                            <a href="#">
+                                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Boneka Kain Perca</h5>
+                                            </a>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tukarkan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bagian 3 -->
+                                <div class="flex pl-5 space-x-10  ">
+                                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <a href="#">
+                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                        </a>
+                                        <div class="px-5 pb-5">
+                                            <a href="#">
+                                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Selimut</h5>
+                                            </a>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tukarkan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                        <a href="#">
+                                            <img class="p-8 rounded-t-lg" src="/docs/images/products/apple-watch.png"/>
+                                        </a>
+                                        <div class="px-5 pb-5">
+                                            <a href="#">
+                                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Sarung Bantal</h5>
+                                            </a>
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                                <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tukarkan</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+
+                            
+                        
+                        </div>
+                    </div>
                 </div>
-                <h1 class="font-extrabold pr-9">Klik</h1>
+                
+                
             </div>
+            
         </div>
 
         <div class="flex pt-44 -mb-20">
             <div>
                 <img class="h-56 w-screen max-w-full" src="/images/Rectangle 4.png">
-            </div>
-            <div class="absolute pt-20 pl-96">
-                <img class=" relative h-14 pl-96 ml-56" src="/images/lambangsosmed.jpg">
             </div>
         </div>
     </div>

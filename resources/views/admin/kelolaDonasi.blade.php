@@ -97,132 +97,74 @@
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                    <th scope="col" class="p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-all-search" type="checkbox"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="checkbox-all-search" class="sr-only">checkbox</label>
-                        </div>
+                    <th scope="col" class="px-6 py-3">
+                        Id
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Id_User
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Nama Donatur
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Kontak Donatur
+                        Alamat
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Jenis Barang
+                        Tanggal Donasi
 
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Deskripsi Barang
+                        Email
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Kondisi Barang
+                        No. Hp
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Tujuan Donasi </th>
+                        Cara Kirim </th>
+                    <th>Status</th>
                     <th scope="col" class="px-6 py-3">
                         Action </th>
                 </tr>
             </thead>
             <tbody>
-                <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Joko Handoko </th>
-                    <td class="px-6 py-4">
-                        0842010922
-                    </td>
-                    <td class="px-6 py-4">
-                        Celana Jeans
-                    </td>
-                    <td class="px-6 py-4">
-                        terbuat dari bahan titanium dan uranium dari negeri wakanda </td>
+                @isset($datadonasi)
+                    @foreach ($datadonasi as $item)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $item->id }}</th>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $item->id_user }}</th>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $item->nama }} </th>
+                            <td class="px-6 py-4">
+                                {{ $item->alamat }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->tgldonasi }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->email }}</td>
 
-                    <td class="px-6 py-4">
-                        Layak Pakai
-                    </td>
-                    <td class="px-6 py-4">
-                        Panti Asuhan Guno Mulio
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-green-600 dark:text-blue-500 hover:underline">Terima</a>
-                        <a href="#" class="font-medium text-red-600 dark:text-blue-500 hover:underline">Tolak</a>
+                            <td class="px-6 py-4">
+                                {{ $item->no_hp }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->cr_kirim }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $item->status }}
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#"
+                                    class="font-medium text-green-600 dark:text-blue-500 hover:underline">Terima</a>
+                                <a href="#"
+                                    class="font-medium text-red-600 dark:text-blue-500 hover:underline">Tolak</a>
 
-                    </td>
-                </tr>
-                <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Joko Handoko </th>
-                    <td class="px-6 py-4">
-                        0842010922
-                    </td>
-                    <td class="px-6 py-4">
-                        Celana Jeans
-                    </td>
-                    <td class="px-6 py-4">
-                        terbuat dari bahan titanium dan uranium dari negeri wakanda </td>
-
-                    <td class="px-6 py-4">
-                        Layak Pakai
-                    </td>
-                    <td class="px-6 py-4">
-                        Panti Asuhan Guno Mulio
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-green-600 dark:text-blue-500 hover:underline">Terima</a>
-                        <a href="#" class="font-medium text-red-600 dark:text-blue-500 hover:underline">Tolak</a>
-
-                    </td>
-                </tr>
-                <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td class="w-4 p-4">
-                        <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                        </div>
-                    </td>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Joko Handoko </th>
-                    <td class="px-6 py-4">
-                        0842010922
-                    </td>
-                    <td class="px-6 py-4">
-                        Celana Jeans
-                    </td>
-                    <td class="px-6 py-4">
-                        terbuat dari bahan titanium dan uranium dari negeri wakanda </td>
-
-                    <td class="px-6 py-4">
-                        Layak Pakai
-                    </td>
-                    <td class="px-6 py-4">
-                        Panti Asuhan Guno Mulio
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-green-600 dark:text-blue-500 hover:underline">Terima</a>
-                        <a href="#" class="font-medium text-red-600 dark:text-blue-500 hover:underline">Tolak</a>
-
-                    </td>
-                </tr>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endisset
             </tbody>
         </table>
     </div>

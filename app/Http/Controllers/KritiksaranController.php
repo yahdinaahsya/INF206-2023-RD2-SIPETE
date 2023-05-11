@@ -14,7 +14,7 @@ class KritiksaranController extends Controller
     public function index()
     {
         //
-        $kritiksarans= Kritiksaran::all();
+        $kritiksarans = Kritiksaran::all();
         return view('admin.kelolaKritik', compact(['kritiksarans']));
     }
 

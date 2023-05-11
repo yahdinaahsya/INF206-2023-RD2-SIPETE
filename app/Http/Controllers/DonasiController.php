@@ -42,27 +42,39 @@ class DonasiController extends Controller
             'cr_kirim' => $request->pengiriman
         ]);
 
-        // Ambil data koin dari database
-        $koin = TableKoinModel::where('id_user', Auth::user()->id)->first();
-
-        // Periksa apakah data koin sudah ada di database
-        if (!$koin) {
-            // Jika belum, buat data koin baru untuk user ini
-            $koin = new TableKoinModel();
-            $koin->id_user = Auth::user()->id;
-            $koin->saldo_koin = 100;
-        } else {
-            // Jika sudah, tambahkan saldo koin
-            $koin->saldo_koin += 100;
-        }
-
-        // Simpan data koin ke dalam database
-        $koin->save();
-
-        // Simpan data koin ke dalam session
-        session()->put('datakoin', $koin);
 
         return redirect()->back();
+    }
+    public function terima($id)
+    {
+        $donasi = Donasi::find($id);
+        if ($donasi->status == 'dalam antrian') {
+            $donasi->status = 'selesai';
+            $donasi->save();
+
+            // Ambil data koin dari database
+            $koin = TableKoinModel::where('id_user', Auth::user()->id)->first();
+            // Periksa apakah data koin sudah ada di database
+            if (!$koin) {
+                // Jika belum, buat data koin baru untuk user ini
+                $koin = new TableKoinModel();
+                $koin->id_user = Auth::user()->id;
+                $koin->saldo_koin = 100;
+            } else {
+                // Jika sudah, tambahkan saldo koin
+                $koin->saldo_koin += 100;
+            }
+
+            // Simpan data koin ke dalam database
+            $koin->save();
+
+            // Simpan data koin ke dalam session
+            session()->put('datakoin', $koin);
+
+            return redirect()->back()->with('success', 'Pesanan telah diterima.');
+        } else {
+            return redirect()->back()->with('error', 'Pesanan sudah diterima sebelumnya.');
+        }
     }
 
 
@@ -99,8 +111,14 @@ class DonasiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Donasi $Donasi)
+    public function destroy($id)
     {
-        //
+        $donasi = Donasi::where('id', $id)->first();
+        if ($donasi) {
+            $donasi->delete();
+        }
+        return redirect()->back();
     }
+
+
 }

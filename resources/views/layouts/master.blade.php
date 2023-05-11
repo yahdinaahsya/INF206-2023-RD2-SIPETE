@@ -89,6 +89,14 @@
                         <span class="title">Kritik dan Saran</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('tambahBarang') }}">
+                        <span class="icon">
+                            <ion-icon name="bag-check-outline"></ion-icon>
+                        </span>
+                        <span class="title">Tambah Barang</span>
+                    </a>
+                </li>
                 {{-- <li>
                     <a href="#">
                         <span class="icon">

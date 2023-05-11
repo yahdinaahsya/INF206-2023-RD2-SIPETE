@@ -18,7 +18,7 @@ Install semua depedency yang dibutuhkan untuk menjalankan program
 ```bash
 composer install && npm install
 ```
-# Menjalankan Web Kupitilizer
+# Menjalankan Web Sipete
 
 Jalankan server laravel
 

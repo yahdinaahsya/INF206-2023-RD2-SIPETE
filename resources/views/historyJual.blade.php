@@ -15,7 +15,10 @@
                         Cara Pengiriman
                     </th>
                     <th scope="col" class="px-6 py-3">
-                    Status
+                        Status
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Action
                     </th>
                 </tr>
             </thead>

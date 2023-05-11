@@ -27,12 +27,14 @@
                 menangani sampah tekstil</h2>
         </div>
         <div class="pt-16">
-            <img class="h-screen max-w-full mx-auto" src="images/pengolahan.jpg">
+            <iframe class="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700"
+                src="https://www.youtube.com/watch?v=NW3OFK-O3DM">
+            </iframe>
         </div>
     </div>
     <div>
         <div class="text-center pt-20">
-            <h1 class="font-[arial] font-extrabold text-4xl">Informasi</h1>
+            <h1 class="font-[arial] font-extrabold text-4xl">Artikel</h1>
         </div>
             <div class=" pt-16">
    

@@ -19,7 +19,9 @@ use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\OlahDataStatistikController;
 use App\Models\OlahData;
 use App\Http\Controllers\HistoryDonasiController;
+use App\Http\Controllers\KoinController;
 use App\Http\Controllers\KritiksaranController;
+use App\Http\Controllers\PoinSipeteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +40,10 @@ Route::get('/', function () {
 
 Route::get('/profil', [ProfileController::class, 'showCountDonation']);
 
-Route::get('/redeemkoin', function () {
-    return view('redeemkoin');
-});
+Route::get('/redeemkoin', [PoinSipeteController::class, 'index'])->name('redeemkoin.index');
+Route::get('/redeemkoin/{id_user}', [PoinSipeteController::class, 'show'])->name('redeemkoin.show');
+Route::post('/redeemkoin', [PoinSipeteController::class, 'store'])->name('redeemkoin.store');
+
 
 Route::get('/pengelolaan', function () {
     return view('pengelolaan');
@@ -72,7 +75,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
     Route::post('/simpan-jual', [JualController::class, 'store'])->name('simpan-jual');
     Route::post('/simpan-Donasi', [DonasiController::class, 'store'])->name('simpan-Donasi');
     Route::post('/simpan-Kritik', [KritiksaranController::class, 'store'])->name('simpan-Kritik');
@@ -90,7 +92,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/manage-foto-profil', [FotoProfilAdminController::class, 'index'])->name('manage-foto-profil');
         Route::get('/kelola-donasi', [DonasiController::class, 'index'])->name('kelola-donasi');
         Route::get('/manage-textil', [JualController::class, 'index'])->name('manage-textil');
-        Route::get('/kelola-koin', [KelolaKoinController::class, 'index'])->name('kelola-koin');
         Route::get('/create-user', [ManageUserController::class, 'create'])->name('create-user');
         Route::get('/create-textil', [ManageTextileController::class, 'create'])->name('create-textil');
         // create data user
@@ -128,6 +129,14 @@ Route::middleware('auth')->group(function () {
             return view('data', ['data' => $data]); // Kirim data ke dalam view data.blade.php
         });
         Route::resource('ratings', 'App\Http\Controllers\OlahDataStatistikController')->only(['index', 'update']);
+
+        // update coin
+        // Menampilkan daftar koin
+        Route::get('/kelola-koin', [KoinController::class, 'index'])->name('koin.index');
+        // Menampilkan form untuk mengubah jumlah koin
+        Route::get('/kelola-koin/{id}/edit', [KoinController::class, 'edit'])->name('coin-edit');
+        // Mengupdate jumlah koin
+        Route::put('/kelola-koin/{id}', [KoinController::class, 'update'])->name('coin-update');
     });
 });
 

@@ -66,7 +66,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('kelola-koin') }}">
+                    <a href="{{ route('koin.index') }}">
                         <span class="icon">
                             <ion-icon name="gift-outline"></ion-icon>
                         </span>

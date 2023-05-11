@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TableKoinModel;
 use App\Models\Jual;
 use App\Http\Requests\StorejualRequest;
 use App\Http\Requests\UpdatejualRequest;
+
 use Illuminate\Support\Facades\Auth;
 
 class JualController extends Controller
@@ -42,6 +44,22 @@ class JualController extends Controller
             'pakaian' => $request->pakaian,
             'cr_kirim' => $request->pengiriman,
         ]);
+        // ambil data koin dari database
+        $koin = TableKoinModel::where('id_user', Auth::user()->id)->first();
+        // periksa apakah data koin sudah ada di database
+        if (!$koin) {
+            // jika belum, buat data koin baru untuk user ini
+            $koin = new TableKoinModel();
+            $koin->id_user = Auth::User()->id;
+            $koin->saldo_koin = 200;
+        } else {
+            // jika sudah, tambahkan saldo koin
+            $koin->saldo_koin += 200;
+        }
+        // simpan data koin ke database
+        $koin->save();
+        // simpan data koin ke dalam session
+        session()->put('datakoin', $koin);
         return redirect('/halamanjual')->with('success', 'Data Berhasil Ditambahkan');
     }
 

@@ -66,10 +66,10 @@
 
             <section class="management">
 
-                <div class="container mx-auto">
+                {{-- <div class="container mx-auto">
                     <h1 class="text-2xl font-bold text-center mb-4">Statistics</h1>
                     <canvas id="myChart"></canvas>
-                </div>
+                </div> --}}
 
 
                 {{-- <div class="detail-index">

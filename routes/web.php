@@ -3,6 +3,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManageUserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\FotoProfilAdminController;
 use App\Http\Controllers\ManageTextileController;
 use App\Models\TableUserModel;
@@ -46,6 +47,15 @@ Route::get('/profil', [ProfileController::class, 'showCountDonation']);
 Route::get('/redeemkoin', [PoinSipeteController::class, 'index'])->name('redeemkoin.index');
 Route::get('/redeemkoin/{id_user}', [PoinSipeteController::class, 'show'])->name('redeemkoin.show');
 Route::post('/redeemkoin', [PoinSipeteController::class, 'store'])->name('redeemkoin.store');
+Route::post('/redeemkoin/{id_barang}', [PoinSipeteController::class, 'redeem'])->name('redeemkoin.redeem');
+
+// Route::get('/redeemkoin', [PoinSipeteController::class, 'showRedeemForm'])->name('redeemkoin.showForm');
+
+// Route::get('/redeemkoin', [BarangController::class, 'index'])->name('barang.index');
+// Route::get('/redeemkoin/create', [BarangControlelr::class, 'create'])->name('barang.create');
+// Route::post('/redeemkoin', [BarangController::class, 'store'])->name('barang.store');
+
+
 
 
 Route::get('/pengelolaan', function () {
@@ -164,7 +174,10 @@ Route::middleware('auth')->group(function () {
         // Mengupdate jumlah koin
         Route::put('/kelola-koin/{id}', [KoinController::class, 'update'])->name('coin-update');
 
-        // jka diterima donasi
+        // tambah barang
+        Route::get('/tambahBarang', [BarangController::class, 'index'])->name('tambahBarang');
+        Route::get('/tambahBarang/create', [BarangController::class, 'create'])->name('tambahBarang.create');
+        Route::post('/simpan-barang', [BarangController::class, 'store'])->name('simpan-barang');
 
     });
 });

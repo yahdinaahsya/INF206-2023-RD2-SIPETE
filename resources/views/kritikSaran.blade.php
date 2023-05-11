@@ -15,7 +15,7 @@
             <div class="ml-20 ">
                 <form action="/simpan-Kritik" method="post">
                     @csrf
-                    <label for="nama" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    <label for="nama" class="text-white">
                         <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
                             Nama Anda
                         </p>
@@ -24,7 +24,7 @@
                         class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" name="nama"
                         id="nama" placeholder="Tuliskan nama anda">
 
-                    <label for="email" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    <label for="email" class="text-white">
                         <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
                             Email Anda
                         </p>
@@ -33,7 +33,7 @@
                         class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5" name="email"
                         id="email" placeholder="Tuliskan Email anda">
 
-                    <label for="pesan" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    <label for="pesan" class="text-white">
                         <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
                             Pesan Anda
                         </p>

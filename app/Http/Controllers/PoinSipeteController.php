@@ -12,7 +12,9 @@ class PoinSipeteController extends Controller
     {
         $user = auth()->user(); // Ambil user yang sedang login
         $saldo_koin = TableKoinModel::where('id_user', $user->id)->value('saldo_koin'); // Ambil saldo koin milik user yang sedang login
-
+        if (!$saldo_koin) {
+            $saldo_koin = 0;
+        }
         return view('redeemkoin', compact('saldo_koin'));
     }
     public function show($id_user)

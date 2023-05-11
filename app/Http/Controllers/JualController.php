@@ -43,25 +43,42 @@ class JualController extends Controller
             'no_hp' => $request->telepon,
             'cr_kirim' => $request->pengiriman,
         ]);
-        // ambil data koin dari database
-        $koin = TableKoinModel::where('id_user', Auth::user()->id)->first();
-        // periksa apakah data koin sudah ada di database
-        if (!$koin) {
-            // jika belum, buat data koin baru untuk user ini
-            $koin = new TableKoinModel();
-            $koin->id_user = Auth::User()->id;
-            $koin->saldo_koin = 200;
-        } else {
-            // jika sudah, tambahkan saldo koin
-            $koin->saldo_koin += 200;
-        }
-        // simpan data koin ke database
-        $koin->save();
-        // simpan data koin ke dalam session
-        session()->put('datakoin', $koin);
+
         return redirect('/halamanjual')->with('success', 'Data Berhasil Ditambahkan');
     }
 
+    // terima
+    public function terima($id)
+    {
+        $donasi = Jual::find($id);
+        if ($donasi->status == 'dalam antrian') {
+            $donasi->status = 'selesai';
+            $donasi->save();
+
+            // Ambil data koin dari database
+            $koin = TableKoinModel::where('id_user', Auth::user()->id)->first();
+            // Periksa apakah data koin sudah ada di database
+            if (!$koin) {
+                // Jika belum, buat data koin baru untuk user ini
+                $koin = new TableKoinModel();
+                $koin->id_user = Auth::user()->id;
+                $koin->saldo_koin = 100;
+            } else {
+                // Jika sudah, tambahkan saldo koin
+                $koin->saldo_koin += 100;
+            }
+
+            // Simpan data koin ke dalam database
+            $koin->save();
+
+            // Simpan data koin ke dalam session
+            session()->put('datakoin', $koin);
+
+            return redirect()->back()->with('success', 'Pesanan telah diterima.');
+        } else {
+            return redirect()->back()->with('error', 'Pesanan sudah diterima sebelumnya.');
+        }
+    }
     /**
      * Display the specified resource.
      */
@@ -89,8 +106,12 @@ class JualController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(jual $jual)
+    public function destroy($id)
     {
-        //
+        $jual = Jual::where('id', $id)->first();
+        if ($jual) {
+            $jual->delete();
+        }
+        return redirect()->back();
     }
 }

@@ -15,7 +15,7 @@
             <div class="ml-20 ">
                 <form action="/simpan-Kritik" method="post">
                     @csrf
-                    <label for="nama" class="text-white">
+                    <label for="nama" class="text-white">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                         <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
                             Nama Anda
                         </p>
@@ -26,7 +26,7 @@
 
                     <label for="email" class="text-white">
                         <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
-                            Email Anda
+                            <br>Email Anda
                         </p>
                     </label>
                     <input type="text"
@@ -35,7 +35,7 @@
 
                     <label for="pesan" class="text-white">
                         <p class="form-label block mb-2 text-sm font-medium text-gray-900 ">
-                            Pesan Anda
+                            <br>Pesan Anda
                         </p>
                     </label>
                     <textarea class="form-control bg-gray-200 hover:bg-gray-300 rounded-3xl flex-wrap w-full p-2.5"

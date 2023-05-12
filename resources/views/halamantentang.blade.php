@@ -1,13 +1,75 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="pt-16">
-        <img class="h-screen max-w-full mx-auto" src="images/tentang1.jpg">
+
+    <div id="default-carousel" class="pt-16 relative w-full" data-carousel="slide">
+
+        <div class="relative overflow-hidden rounded-lg md:h-96 pt-16">
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="#">
+                <img src="/images/tentangs1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="..." >
+                <h3 class="absolute font-bold top-5 left-10 uppercase mb-5 font-[arial] text-6xl font-extrabold text-blue">
+                <br> Olah Limbah 
+                <br>Tekstil
+                </h3>
+            </a>
+        </div>
+
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="#">
+                <img src="/images/tentangs2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
+                <h3 class="absolute font-bold top-5 left-10 uppercase mb-5 font-[arial] text-6xl font-extrabold text-blue">
+                    <br> Bersama kita 
+                    <br>BISA !!
+                </h3>
+            </a>
+            </div>
+
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="#">
+                <img src="/images/tentangs3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
+                <h3 class="absolute text-blue font-bold top-5 left-10 uppercase mb-5 font-[arial] text-6xl font-extrabold">
+                    <br> Wujudkan Mimpi
+                </h3>
+            </a>    
+            </div>
+
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <a href="#">
+                <img src="/images/tentang1.jpg" class="absolute block  w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
+                <h3 class="absolute text-white font-bold top-5 left-10 uppercase mb-5 font-[arial] text-6xl font-extrabold text-blue">
+                    <br> 
+                </h3>
+            </a>
+            </div>
+        </div>
+
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+
+        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+        </div>  
     </div>
+    
 
     <div>
-
-
 
         {{-- Mulai Statistik Indonesia --}}
         <br>
@@ -116,13 +178,15 @@
             <h1 class="font-[arial] font-extrabold text-4xl">Tujuan Program</h1>
         </div>
         <div class="flex flex-wrap pt-8 justify-center">
-            <div class="w-full md:w-1/4 px-12 py-8">
+            <div class="w-full md:w-1/4 px-6 py-8">
                 <div class="bg-blue-500 text-white rounded-lg shadow-lg">
                     <div class="px-6 py-4">
                         <h2 class="text-center font-bold text-2xl mb-4">Misi</h2>
-                        <p class="text-lg text-center">Disini kami hadir menjadi solusi ketidak sempurnaan bank sampah
-                            dengan cara menggandeng dan menghubungkan secara langsung 3 komponen utama pengelolaan sampah.
-                            Kurangnya edukasi dan pengetahuan akan dikemanakan pakaian itu pergi harus segera diatasi.</p>
+                        <p class="text-lg text-justify">Disini kami hadir menjadi solusi ketidaksempurnaan bank sampah
+                            dengan cara menggandeng dan juga menghubungkan secara langsung 3 komponen utama dalam pengelolaan sampah,
+                            Kurangnya edukasi dan pengetahuan bagaimana pakaian itu pergi harus segera diatasi.
+                            Meningkatkan kesadaran masyarakat tentang apa dampak limbah tekstil terhadap lingkungan,
+                            serta memberikan solusi untuk mengelola limbah tekstil dengan cara yang ramah lingkungan. </p>
                     </div>
                 </div>
 
@@ -131,7 +195,7 @@
                 <div class="bg-blue-500 text-white rounded-lg shadow-lg">
                     <div class="px-6 py-4">
                         <h2 class="text-center font-bold text-2xl mb-4">Visi</h2>
-                        <p class="text-lg text-center">Kami menyalurkan kembali barang-barang yang masih layak pakai ke
+                        <p class="text-lg text-justify">Kami menyalurkan kembali barang-barang yang masih layak pakai ke
                             orang yang lebih membutuhkan (Reuse), menyulap pakaian usang menjadi wujud baru yang lebih segar
                             misal baju usang menjadi tas keren (Recycle), dan pengguna sistem akan mengurangi konsumsi
                             pakaian terlalu banyak karena nantinya tidak perlu membeli baju baru memakai baju bekas saja
@@ -183,4 +247,5 @@
                     <p class="mt-8 text-center font-bold text-xl">M. Nizar Asykary</p>
                 </div>
             </div>
+        </div>
         @endsection
